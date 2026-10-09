@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-cv="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carlo Coronato – Business & Organizational Development | HR Transformation</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--font:Calibri,Carlito,-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Helvetica,Arial,sans-serif;
+--bg:#f5f5f7;--panel:#fff;--ink:#1d1d1f;--mute:#5f6368;--line:#e3e3e8;--glass:rgba(255,255,255,.72);
+--tech:#0071e3;--people:#e5533d;--biz:#6f55e0;--accent:var(--tech);
+--tech-s:#e3f0fd;--people-s:#fde9e5;--biz-s:#ece8fc}
+:root[data-cv="dark"]{--bg:#000;--panel:#1c1c1e;--ink:#f5f5f7;--mute:#a1a1a6;--line:#2c2c2e;--glass:rgba(28,28,30,.72);--tech:#2997ff;--people:#ff7a62;--biz:#a58bff;--tech-s:#12304d;--people-s:#4a2119;--biz-s:#2c2552}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--font);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--font);font-weight:700;letter-spacing:-.02em;margin:0;line-height:1.15}
+a{color:var(--tech)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--tech);outline-offset:3px;border-radius:8px}
+.layout{display:grid;grid-template-columns:320px 1fr;min-height:100vh}
+aside{background:var(--glass);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-right:1px solid var(--line);padding:52px 30px 36px;position:sticky;top:0;align-self:start;height:100vh;overflow:auto;display:flex;flex-direction:column;gap:28px}
+aside::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,var(--tech),var(--biz),var(--people))}
+aside h1{font-size:2.5rem}
+.role{color:var(--mute);font-size:1rem;margin:10px 0 0}
+.contact{list-style:none;padding:0;margin:0;display:grid;gap:10px;font-size:1rem}
+.contact span{color:var(--mute);font-size:.85rem}
+.contact a{color:var(--ink);text-decoration:none;font-weight:600}
+.contact a:hover{color:var(--tech)}
+nav{display:grid;gap:2px}
+nav a{color:var(--mute);text-decoration:none;padding:8px 14px;border-radius:10px;font-weight:600}
+nav a.on,nav a:hover{background:var(--panel);color:var(--ink)}
+.tools{margin-top:auto;display:flex;gap:8px;flex-wrap:wrap}
+.btn{font:inherit;font-size:.9rem;font-weight:600;background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:8px 14px;border-radius:999px;cursor:pointer}
+.btn:hover{border-color:var(--tech);color:var(--tech)}
+main{padding:60px clamp(20px,5vw,72px);max-width:940px}
+section{margin-bottom:64px}
+section>h2{font-size:2rem;margin-bottom:22px}
+.lead{font-size:1.65rem;line-height:1.3;font-weight:600;letter-spacing:-.015em;margin:0 0 18px}
+p{margin:0 0 14px;color:var(--mute);max-width:66ch}
+#profile p{max-width:none}
+#profile p:not(.lead){text-align:justify;hyphens:auto;-webkit-hyphens:auto}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.chips li{padding:6px 14px;border-radius:999px;font-size:.92rem;font-weight:600;background:var(--tech-s);color:var(--tech)}
+.chips li.people{background:var(--people-s);color:var(--people)}
+.chips li.biz{background:var(--biz-s);color:var(--biz)}
+.chips li.hide{display:none}
+.plain li{background:var(--panel);color:var(--ink);border:1px solid var(--line);font-weight:500}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.filters button{font:inherit;font-size:.85rem;font-weight:600;border:1px solid var(--line);background:var(--panel);color:var(--mute);padding:4px 12px;border-radius:999px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.tl{display:grid;gap:14px;padding-left:24px;border-left:3px solid transparent;border-image:linear-gradient(var(--tech),var(--biz),var(--people)) 1}
+details{background:var(--panel);border-radius:18px;position:relative;box-shadow:0 1px 2px rgba(0,0,0,.05),0 4px 16px rgba(0,0,0,.04)}
+details::before{content:"";position:absolute;left:-34px;top:26px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:3px solid var(--tech)}
+details[open]::before{background:var(--tech)}
+summary{list-style:none;cursor:pointer;padding:20px 56px 20px 22px;display:grid;gap:3px}
+summary::-webkit-details-marker{display:none}
+summary h3{font-size:1.3rem}
+.org{color:var(--mute);font-size:1rem}
+.when{color:var(--tech);font-size:.9rem;font-weight:700}
+summary::after{content:"+";position:absolute;right:20px;top:16px;width:30px;height:30px;line-height:28px;text-align:center;border-radius:50%;background:var(--bg);font-size:1.3rem;color:var(--mute)}
+details[open] summary::after{content:"–"}
+.body{padding:0 22px 20px}
+.body ul{margin:0;padding-left:18px;color:var(--mute)}
+.body li{margin-bottom:8px;max-width:70ch}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.cols h3{font-size:1.2rem;margin-bottom:12px}
+.edu{display:grid;gap:12px}
+.edu div{background:var(--panel);border-radius:14px;padding:14px 18px}
+.edu b{display:block;font-weight:700}
+.edu span{color:var(--mute);font-size:.95rem}
+.pill{display:inline-block;background:var(--people-s);color:var(--people);border-radius:999px;padding:1px 10px;font-size:.78rem;font-style:normal;margin-left:6px}
+footer{color:var(--mute);font-size:.9rem}
+@media (max-width:860px){
+.layout{grid-template-columns:1fr}
+aside{position:static;height:auto;padding:36px 22px 24px;gap:20px;border-right:0;border-bottom:1px solid var(--line)}
+aside h1{font-size:2.1rem}
+nav{display:flex;flex-wrap:wrap;gap:4px}
+main{padding:36px 20px}
+.tl{padding-left:20px}
+details::before{left:-30px}
+}
+@media print{
+:root,:root[data-cv]{--bg:#fff;--panel:#fff;--ink:#000;--mute:#333;--line:#bbb;--tech:#0071e3;--people:#e5533d;--biz:#6f55e0;--tech-s:#e3f0fd;--people-s:#fde9e5;--biz-s:#ece8fc}
+nav,.tools,.filters{display:none}
+.layout{display:block}
+aside{position:static;height:auto;background:#fff;padding:0 0 12px;border:0;border-bottom:2px solid #000;display:block}
+aside::before{display:none}
+main{padding:12px 0;max-width:none}
+summary::after,details::before{display:none}
+details{box-shadow:none;border:1px solid #ccc;break-inside:avoid}
+section{margin-bottom:22px}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+<div>
+<h1>Carlo Coronato</h1>
+<p class="role">Business &amp; Organizational Development · HR Transformation · Project Management</p>
+</div>
+<ul class="contact">
+<li><span>Based in</span><br>Caserta, Italy · open to relocation</li>
+<li><span>Email</span><br><a href="#" id="mail" rel="nofollow">Send me an email</a></li>
+<li><span>LinkedIn</span><br><a href="https://www.linkedin.com/in/carlo-coronato-7138b5141" target="_blank" rel="noopener">Carlo Coronato</a></li>
+</ul>
+<nav aria-label="Sections">
+<a href="#profile">Profile</a>
+<a href="#experience">Experience</a>
+<a href="#expertise">Expertise &amp; tools</a>
+<a href="#education">Education</a>
+<a href="#beyond">Languages &amp; interests</a>
+</nav>
+<div class="tools">
+<button class="btn" id="expand" type="button">Expand all roles</button>
+<button class="btn" id="theme" type="button">Switch theme</button>
+<button class="btn" id="print" type="button">Print / save PDF</button>
+</div>
+</aside>
+
+<main>
+<section id="profile">
+<h2>Profile</h2>
+<p class="lead">HR and Organizational Development professional working where people, processes, technology and business meet.</p>
+<p>Cross-functional background spanning business partnering, digital transformation, technology, analytics and project management. I have supported organizations through process optimization, digitalization, data-driven decision-making and organizational change.</p>
+<p>I work with a project-oriented approach: translating business needs into processes and deliverables, tracking the savings generated by implemented solutions, and measuring their impact and added value for the business.</p>
+<p>Particularly interested in roles where business transformation, organizational development and operational improvement converge.</p>
+</section>
+
+<section id="experience">
+<h2>Professional experience</h2>
+<div class="tl">
+
+<details open>
+<summary><span class="when">Feb 2024 – Present</span><h3>HR Digital &amp; Development | Business Partner</h3><span class="org">Porsche Engineering · Nardò, Italy</span></summary>
+<div class="body"><ul>
+<li>Support strategic and cross-functional initiatives across HR, business and technology, combining HR Business Partnering with digital transformation, organizational development and project management.</li>
+<li>Coordinate business transformation, process improvement and digitalization initiatives, translating organizational needs into structured projects, process changes and technology-enabled solutions.</li>
+<li>Lead and support HR digital projects across the HR systems landscape, ensuring stakeholder alignment, project follow-up, timely adjustments and value-driven implementation.</li>
+<li>Analyze and optimize HR processes, workflows and approval flows, identifying opportunities for simplification, automation, standardization and continuous improvement.</li>
+<li>Manage and optimize HR Information Systems, supporting data integrity, system effectiveness, user adoption and integration between HR, IT and business stakeholders.</li>
+<li>Consolidate and analyze organizational and workforce data to develop reporting and management insights supporting workforce planning, organizational decisions and business priorities.</li>
+<li>Support organizational change initiatives as liaison between HR, IT, management and operational stakeholders, facilitating communication, adoption and implementation.</li>
+<li>Prepare management reporting, presentations and project materials, monitor milestones and follow-up actions, and contribute to governance, procedures and operating models.</li>
+</ul></div>
+</details>
+
+<details>
+<summary><span class="when">Oct 2021 – Jan 2024</span><h3>HR Digital Transformation Project Coordinator | Junior HR Business Partner</h3><span class="org">Rummo Group / Rummo USA · Benevento, Italy / New York, USA (remote)</span></summary>
+<div class="body"><ul>
+<li>Coordinated HR digital transformation initiatives, combining HR process redesign, HRIS management, workflow mapping, internal tool development and change enablement.</li>
+<li>Managed and maintained Zucchetti Infinity HR modules (HCM, Performance, Time &amp; Attendance and Payroll), supporting system effectiveness and HR process digitalization.</li>
+<li>Mapped HR processes and workflows, identified improvement opportunities and implemented optimized procedures, tools and operating practices.</li>
+<li>Designed and implemented internal digital tools and mobile solutions to streamline workforce-related activities, resource allocation and stakeholder collaboration.</li>
+<li>Supported U.S. HR Business Partnering: employee relations, compensation reviews, benchmarking, budgeting, performance, talent and succession management.</li>
+<li>Prepared HR analysis and reporting to support management decisions, resource allocation and organizational development.</li>
+</ul></div>
+</details>
+
+<details>
+<summary><span class="when">Sep 2020 – Oct 2021</span><h3>HR Generalist</h3><span class="org">Rummo S.p.A. · Benevento, Italy</span></summary>
+<div class="body"><ul>
+<li>Managed recruitment, employee relations, organizational data, reporting and workforce scheduling, supporting day-to-day HR operations and business requirements.</li>
+<li>Prepared organizational charts, job descriptions and HR reporting, maintaining accurate workforce and compensation information.</li>
+<li>Supported management and operational departments on workforce, compliance and employee-related matters.</li>
+</ul></div>
+</details>
+
+<details>
+<summary><span class="when">Jan 2020 – Sep 2020</span><h3>HR Assistant (maternity leave contract)</h3><span class="org">Rummo S.p.A. · Benevento, Italy</span></summary>
+<div class="body"><ul>
+<li>Supported HR administration in payroll, time and attendance, data management, reporting, employee queries and training coordination using Zucchetti systems and HR databases.</li>
+</ul></div>
+</details>
+
+<details>
+<summary><span class="when">Jun 2018 – Dec 2018</span><h3>HR Generalist Intern</h3><span class="org">Antares Srl · Caserta, Italy</span></summary>
+<div class="body"><ul>
+<li>Supported HR administration in attendance monitoring, document management and daily HR operations.</li>
+</ul></div>
+</details>
+
+<details>
+<summary><span class="when">Jan 2017 – Feb 2017</span><h3>Logistic Assistant</h3><span class="org">Adorno Srl · Reggio Emilia, Italy</span></summary>
+<div class="body"><ul>
+<li>Supported process and operational efficiency through a Warehouse Management System (WMS) for inventory tracking and material management.</li>
+<li>Maintained accurate digital records of stock levels and incoming/outgoing materials, ensuring data accuracy and traceability.</li>
+<li>Monitored material flows and inventory movements, supporting the optimization of operational activities and availability of components.</li>
+</ul></div>
+</details>
+
+</div>
+</section>
+
+<section id="expertise">
+<h2>Expertise &amp; tools</h2>
+<div class="cols">
+<div>
+<h3>Core expertise</h3>
+<div class="filters" role="group" aria-label="Filter expertise"><button type="button" data-f="all" aria-pressed="true">All</button><button type="button" data-f="people" aria-pressed="false">People</button><button type="button" data-f="tech" aria-pressed="false">Tech</button><button type="button" data-f="biz" aria-pressed="false">Business</button></div>
+<ul class="chips" id="core">
+<li>Business &amp; Organizational Development</li><li>Business Transformation</li><li>Business Partner</li><li>Process Improvement</li><li>Project Management</li><li>HR Transformation</li><li>HRIS &amp; HR Technology</li><li>Analytics</li><li>Digitalization &amp; Automation</li><li>AI MCP Automations</li><li>Change Management</li><li>Governance &amp; Operating Processes</li><li>Stakeholder Management</li><li>Reporting</li><li>Skills &amp; Workforce Planning</li><li>Training Design</li>
+</ul>
+</div>
+<div>
+<h3>Digital &amp; professional tools</h3>
+<ul class="chips">
+<li>SAP SuccessFactors</li><li>Zucchetti Infinity</li><li>Power BI</li><li>Microsoft 365</li><li>Power Automate</li><li>Power Apps</li><li>Microsoft Planner</li><li>Excel</li><li>PowerPoint</li><li>Visio</li><li>Jira</li><li>Confluence</li><li>SAP Signavio</li><li>Learn365</li><li>Draw.io</li><li>MS Access / Visual Basic</li><li>Copilot Studio</li><li>Arxivar</li><li>G-Suite Enterprise</li><li>Infobusiness</li><li>Board BI</li><li>Stages</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<div class="edu">
+<div><b>Bachelor Degree in Law</b><span>Università degli Studi di Cassino e del Lazio Meridionale · Sep 2015 – Jul 2019 · Focus: Labor Law and Administrative Law</span></div>
+<div><b>Music Business and Modern Guitar <em class="pill">Scholarship winner</em></b><span>ICMP Institute of Contemporary Music Performance, London · Jan 2013 – Jun 2013</span></div>
+<div><b>High school Geometer Diploma</b><span>ISISS Michelangelo Buonarroti, Caserta · Sep 2006 – Jul 2011 · Project 5 (Experimental Program)</span></div>
+<div><b>Software Engineering Internship <em class="pill">Scholarship winner</em></b><span>Politecnico di Milano · 2010</span></div>
+</div>
+</section>
+
+<section id="beyond">
+<h2>Languages &amp; interests</h2>
+<div class="cols">
+<div>
+<h3>Languages</h3>
+<ul class="chips"><li>Italian – Native</li><li>English – Full professional proficiency (C1)</li></ul>
+</div>
+<div>
+<h3>Sports</h3>
+<ul class="chips"><li>Tennis</li><li>Water polo</li><li>Running</li><li>Gym</li><li>Golf</li><li>Trekking</li></ul>
+</div>
+</div>
+<p style="margin-top:18px">Music is a constant: guitar (I have taught modern guitar since 2015), piano, drums and composition. I enjoy meeting people from diverse cultural backgrounds, as I did during my years in London and whenever I travel to new places.</p>
+</section>
+
+<footer>Carlo Coronato · Business &amp; Organizational Development / HR Transformation</footer>
+</main>
+</div>
+
+<script>
+(function(){
+var root=document.documentElement;
+function $(s){return document.querySelector(s)}
+var all=[].slice.call(document.querySelectorAll('details'));
+var exp=$('#expand');
+exp.addEventListener('click',function(){
+var open=all.some(function(d){return !d.open});
+all.forEach(function(d){d.open=open});
+exp.textContent=open?'Collapse all roles':'Expand all roles';
+});
+$('#theme').addEventListener('click',function(){
+root.setAttribute('data-cv',root.getAttribute('data-cv')==='light'?'dark':'light');
+});
+$('#print').addEventListener('click',function(){
+all.forEach(function(d){d.open=true});
+window.print();
+});
+window.addEventListener('beforeprint',function(){all.forEach(function(d){d.open=true})});
+
+var cat={people:['Business Partner','HR Transformation','Change Management','Stakeholder Management','Skills & Workforce Planning','Training Design'],tech:['HRIS & HR Technology','Analytics','Digitalization & Automation','AI MCP Automations','Reporting']};
+var core=[].slice.call(document.querySelectorAll('#core li'));
+core.forEach(function(li){var t=li.textContent.trim(),c='biz';if(cat.people.indexOf(t)>-1)c='people';else if(cat.tech.indexOf(t)>-1)c='tech';li.dataset.c=c;if(c!=='tech')li.className=c;});
+var fb=[].slice.call(document.querySelectorAll('.filters button'));
+fb.forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;fb.forEach(function(x){x.setAttribute('aria-pressed',x===b)});core.forEach(function(li){li.classList.toggle('hide',f!=='all'&&li.dataset.c!==f)})})});
+$('#mail').addEventListener('click',function(e){e.preventDefault();window.location.href='mailto:'+['crs.coronato','gmail.com'].join('@');});
+var links=[].slice.call(document.querySelectorAll('nav a'));
+var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+if('IntersectionObserver' in window){
+var io=new IntersectionObserver(function(es){
+es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})
+},{rootMargin:'-30% 0px -60% 0px'});
+secs.forEach(function(s){io.observe(s)});
+}
+})();
+</script>
+</body>
+</html>
