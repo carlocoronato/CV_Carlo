@@ -105,6 +105,79 @@ footer{color:var(--mute);font-size:.9rem}
 .note{font-size:.85rem;margin:16px 0 0}
 @media (prefers-reduced-motion:reduce){.bar i{transition:none}}
 @media print{.bar i{width:var(--w)!important}}
+.jr{display:grid;gap:14px}
+.stage{display:grid;grid-template-columns:64px 1fr;gap:18px;background:var(--panel);border-radius:18px;padding:20px;border-left:5px solid var(--c);box-shadow:0 1px 2px rgba(0,0,0,.05)}
+.s0{--c:var(--mute)}
+.logo{width:64px;height:64px;border-radius:16px;background:var(--bg);display:grid;place-items:center;font-weight:700;font-size:1.2rem;color:var(--c);overflow:hidden}
+.logo img{width:100%;height:100%;object-fit:contain;padding:8px}
+.stage h3{font-size:1.25rem;margin-top:6px}
+.tag{display:inline-block;font-size:.8rem;font-weight:700;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent);padding:2px 10px;border-radius:999px}
+.tag.now{--c:var(--people);margin-left:6px}
+.steps{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:10px 0 8px}
+.steps span{background:var(--bg);padding:3px 12px;border-radius:999px;font-size:.9rem;font-weight:600}
+.steps i{font-style:normal;color:var(--mute)}
+.stage p{margin:0}
+.hm{overflow-x:auto}
+.hm table{border-collapse:separate;border-spacing:4px;width:100%;min-width:540px}
+.hm th{font-size:.85rem;font-weight:700;color:var(--mute);text-align:center;padding:2px 4px}
+.hm th small{display:block;font-weight:500}
+.hm tbody th{text-align:left;color:var(--ink);font-size:.95rem;font-weight:600}
+.hm{--l1:#f0b43c;--l2:#2db6a3;--l3:#3b6df0}
+:root[data-cv="dark"] .hm{--l1:#e3a62f;--l2:#3ccbb8;--l3:#4f8cff}
+.hm td{height:36px;border-radius:8px;background:var(--bg);border:1px dashed var(--line);text-align:center;font-size:.8rem;letter-spacing:2px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.hm td[data-l="1"]{background:var(--l1);color:#2b1d00;border:0}.hm td[data-l="1"]::after{content:"\25CF"}
+.hm td[data-l="2"]{background:var(--l2);color:#00241f;border:0}.hm td[data-l="2"]::after{content:"\25CF\25CF"}
+.hm td[data-l="3"]{background:var(--l3);color:#fff;border:0}.hm td[data-l="3"]::after{content:"\25CF\25CF\25CF"}
+.hm td[data-l="0"]::after{content:"\2013";color:var(--mute)}
+.scale{display:grid;gap:10px;margin-top:16px}.sc{display:grid;grid-template-columns:16px 1fr;gap:12px;align-items:start}.sc .k{margin:4px 0 0}.sc p{margin:0;max-width:none;font-size:.95rem}.sc b{color:var(--ink)}
+.legend .k{display:inline-block;width:14px;height:14px;border-radius:4px;margin-right:8px;vertical-align:-2px;background:var(--bg);border:1px dashed var(--line)}
+.legend .k1{background:var(--l1);border:0}.legend .k2{background:var(--l2);border:0}.legend .k3{background:var(--l3);border:0}
+.btn2{font:inherit;font-weight:600;background:var(--panel);color:var(--ink);border:1px solid var(--line);padding:10px 18px;border-radius:999px;cursor:pointer;margin:6px 0 18px}
+.btn2:hover{border-color:var(--tech);color:var(--tech)}
+@media (max-width:860px){.stage{grid-template-columns:1fr;gap:12px}}
+@media print{#full[hidden]{display:block}.btn2{display:none}}
+.p{--c:var(--people)}.t{--c:var(--tech)}.z{--c:var(--biz)}
+.bs{font-size:clamp(.6rem,1.6cqw,.8rem);color:var(--mute);font-weight:600;margin-top:1px}
+.cap{margin:4px 0 8px;color:var(--mute);min-height:2.9em}.cap b{color:var(--ink);font-size:1.15rem;display:block}
+.seg{display:inline-flex;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px;margin:2px 0 16px}
+.seg button{font:inherit;font-weight:600;border:0;background:none;color:var(--mute);padding:7px 20px;border-radius:999px;cursor:pointer}
+.seg button[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.pcs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.pc{font:inherit;font-weight:600;font-size:.9rem;background:var(--bg);color:var(--mute);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer}
+.pc small{font-weight:500}
+.pc[aria-pressed="true"]{background:var(--tech);color:#fff;border-color:var(--tech)}
+.playb{margin:0 0 0 auto;padding:6px 16px}
+.cloudw{container-type:inline-size;max-width:780px;margin:0 auto}
+.cloud{position:relative;height:62cqw}
+.bw{position:absolute;width:24cqw;transform:translateX(-50%);text-align:center}
+.bc{height:20cqw;display:flex;align-items:flex-end;justify-content:center}
+.bo{display:block;border-radius:50%;background:var(--c);width:var(--d);height:var(--d);opacity:.9;transition:width 1.5s cubic-bezier(.3,.7,.2,1),height 1.5s cubic-bezier(.3,.7,.2,1),opacity .8s}
+.bo[data-l="0"]{background:var(--mute);opacity:.35}
+.bl{font-size:clamp(.66rem,1.9cqw,.95rem);font-weight:700;margin-top:6px;line-height:1.15;color:var(--ink)}
+.bw.off .bl{opacity:.4}
+.kl{margin-top:8px}.kl li{color:var(--mute)}.kl li i{background:var(--c)}
+.kb{display:block;border-radius:50%;background:var(--ink);width:var(--d);height:var(--d);margin:auto}
+.sc{grid-template-columns:40px 1fr}.sc .k{margin:4px 0 0}
+.stage.hl{box-shadow:0 0 0 2px var(--c),0 4px 16px rgba(0,0,0,.08)}
+@media (prefers-reduced-motion:reduce){.bo{transition:none}}
+@media print{#vmat[hidden]{display:block}.seg,.pcs{display:none}}
+.mx{display:grid;grid-template-columns:minmax(210px,1.7fr) repeat(4,minmax(76px,1fr));min-width:620px;align-items:center}
+.mh{text-align:center;font-size:.85rem;font-weight:700;color:var(--mute);padding:2px 4px 8px}.mh small{display:block;font-weight:500}
+.mgl,.mgb{margin-top:12px;padding-top:10px;border-top:1px solid var(--line)}
+.mgl{display:flex;align-items:center;gap:8px;font-weight:700;font-size:1rem}
+.mgl::before{content:"";width:11px;height:11px;border-radius:50%;background:var(--c);flex:none}
+.mgb{display:grid;place-items:center;min-height:36px}
+.mb{display:block;border-radius:50%;background:var(--c);width:var(--d);height:var(--d)}
+.ml{font-size:.93rem;padding:0 8px 0 19px;color:var(--ink)}
+.mc{position:relative;height:30px;margin:2px;border-radius:8px;background:var(--bg);border:1px dashed var(--line);text-align:center;line-height:28px;font-size:.72rem;letter-spacing:2px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.mc[data-l="0"]::after{content:"\2013";color:var(--mute);letter-spacing:0}
+.mc[data-l="1"]{background:color-mix(in srgb,var(--c) 24%,var(--panel));border:0;color:var(--ink)}.mc[data-l="1"]::after{content:"\25CF"}
+.mc[data-l="2"]{background:color-mix(in srgb,var(--c) 58%,var(--panel));border:0;color:var(--ink)}.mc[data-l="2"]::after{content:"\25CF\25CF"}
+.mc[data-l="3"]{background:var(--c);border:0;color:#fff}.mc[data-l="3"]::after{content:"\25CF\25CF\25CF"}
+:root[data-cv="dark"] .mc[data-l="3"]{color:#0b0b0c}
+.mc[data-f]::before{content:"\2605";position:absolute;top:-1px;right:5px;font-size:.72rem;line-height:1.3;letter-spacing:0}
+.mlg{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px;padding:0;margin:18px 0 0;font-size:.9rem;color:var(--mute)}
+.mlg li{display:flex;align-items:center;gap:8px}.mlg .mc{width:42px;margin:0}
 @media (max-width:860px){
 .row{grid-template-columns:1fr 90px}.row .bar{grid-column:1/-1;grid-row:2}
 .layout{grid-template-columns:1fr}
@@ -136,111 +209,148 @@ section{margin-bottom:22px}
 <p class="role">Business &amp; Organizational Development · HR Transformation · Project Management</p>
 </div>
 <ul class="contact">
-<li><span>Based in</span><br>Caserta, Italy · open to relocation</li>
-<li><span>Email</span><br><a href="#" id="mail" rel="nofollow">Send me an email</a></li>
+<li data-it="&lt;span&gt;Sede&lt;/span&gt;&lt;br&gt;Caserta, Italia · disponibile al trasferimento"><span>Based in</span><br>Caserta, Italy · open to relocation</li>
+<li><span>Email</span><br><a href="#" id="mail" rel="nofollow" data-it="Scrivimi una email">Send me an email</a></li>
 <li><span>LinkedIn</span><br><a href="https://www.linkedin.com/in/carlo-coronato-7138b5141" target="_blank" rel="noopener">Carlo Coronato</a></li>
 </ul>
 <nav aria-label="Sections">
-<a href="#profile">Profile</a>
-<a href="#experience">Experience</a>
-<a href="#expertise">Expertise &amp; tools</a>
-<a href="#impact">Projects impact</a>
-<a href="#education">Education</a>
-<a href="#beyond">Languages &amp; interests</a>
+<a href="#profile" data-it="Profilo">Profile</a>
+<a href="#experience" data-it="Evoluzione di carriera">Career evolution</a>
+<a href="#expertise" data-it="Competenze e strumenti">Expertise &amp; tools</a>
+<a href="#impact" data-it="Impatto dei progetti">Projects impact</a>
+<a href="#education" data-it="Formazione">Education</a>
+<a href="#beyond" data-it="Lingue e interessi">Languages &amp; interests</a>
 </nav>
 <div class="tools">
+<button class="btn" id="lang" type="button" aria-label="Passa all'italiano">Italiano</button>
 <button class="btn" id="expand" type="button">Expand all roles</button>
-<button class="btn" id="theme" type="button">Switch theme</button>
-<button class="btn" id="print" type="button">Print / save PDF</button>
+<button class="btn" id="theme" type="button" data-it="Cambia tema">Switch theme</button>
+<button class="btn" id="print" type="button" data-it="Stampa / salva PDF">Print / save PDF</button>
 </div>
 </aside>
 
 <main>
 <section id="profile">
-<h2>Profile</h2>
-<p class="lead">HR and Organizational Development professional working where people, processes, technology and business meet.</p>
-<p>Cross-functional background spanning business partnering, digital transformation, technology, analytics and project management. I have supported organizations through process optimization, digitalization, data-driven decision-making and organizational change.</p>
-<p>I work with a project-oriented approach: translating business needs into processes and deliverables, tracking the savings generated by implemented solutions, and measuring their impact and added value for the business.</p>
-<p>Particularly interested in roles where business transformation, organizational development and operational improvement converge.</p>
+<h2 data-it="Profilo">Profile</h2>
+<p class="lead" data-it="Professionista HR e Organizational Development, attivo dove si incontrano persone, processi, tecnologia e business.">HR and Organizational Development professional working where people, processes, technology and business meet.</p>
+<p data-it="Background trasversale che spazia tra business partnering, trasformazione digitale, tecnologia, analytics e project management. Ho supportato le organizzazioni nell&#x27;ottimizzazione dei processi, nella digitalizzazione, nelle decisioni data-driven e nel cambiamento organizzativo.">Cross-functional background spanning business partnering, digital transformation, technology, analytics and project management. I have supported organizations through process optimization, digitalization, data-driven decision-making and organizational change.</p>
+<p data-it="Lavoro con un approccio orientato ai progetti: traduco le esigenze di business in processi e deliverable, monitoro i risparmi generati dalle soluzioni implementate e ne misuro impatto e valore aggiunto per il business.">I work with a project-oriented approach: translating business needs into processes and deliverables, tracking the savings generated by implemented solutions, and measuring their impact and added value for the business.</p>
+<p data-it="Particolarmente interessato a ruoli in cui convergono trasformazione del business, sviluppo organizzativo e miglioramento operativo.">Particularly interested in roles where business transformation, organizational development and operational improvement converge.</p>
 </section>
 
 <section id="experience">
-<h2>Professional experience</h2>
+<h2 data-it="Evoluzione di carriera">Career Evolution</h2>
+<p data-it="Come è cresciuto il mio profilo in tre organizzazioni: dalle operations HR alla trasformazione digitale e allo sviluppo organizzativo.">How my profile has grown across three organizations: from HR operations to digital transformation and organizational development.</p>
+<div class="seg" role="tablist" aria-label="View"><button type="button" role="tab" data-v="dom" aria-selected="true" data-it="Domini">Domain</button><button type="button" role="tab" data-v="mat" aria-selected="false" data-it="Matrice">Matrix</button></div>
+<div id="vdom" class="panel">
+<h3 data-it="Il mio profilo per dominio">My profile by domain</h3>
+<p class="hint" data-it="Scegli una fase, oppure premi Avvia per vedere crescere il mio profilo.">Pick a phase, or press Play to watch my profile grow.</p>
+<div class="pcs"><button class="pc" type="button" aria-pressed="false">Antares <small>2018</small></button><button class="pc" type="button" aria-pressed="false">Rummo <small>2020–21</small></button><button class="pc" type="button" aria-pressed="false">Rummo <small>2021–24</small></button><button class="pc" type="button" aria-pressed="true" data-it="Porsche Eng. &lt;small&gt;2024–oggi&lt;/small&gt;">Porsche Eng. <small>2024–now</small></button><button class="btn2 playb" id="play" type="button" data-it="▶ Avvia">▶ Play</button></div>
+<div class="cap" id="cap" aria-live="polite"></div>
+<div class="cloudw"><div class="cloud"><div class="bw p" style="left:14%;top:0cqw"><div class="bc"><span class="bo" data-l="1" style="--d:8cqw"></span></div><div class="bl" data-it="Operations HR">HR operations</div><div class="bs"></div></div><div class="bw p" style="left:15%;top:33cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="Business partnering">Business partnering</div><div class="bs"></div></div><div class="bw t" style="left:44%;top:0cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="HRIS">HRIS</div><div class="bs"></div></div><div class="bw t" style="left:62%;top:33cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="Processi e automazione">Process &amp; automation</div><div class="bs"></div></div><div class="bw t" style="left:38%;top:33cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="Analytics">Analytics</div><div class="bs"></div></div><div class="bw z" style="left:86%;top:14cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="Sviluppo organizzativo">Org. development</div><div class="bs"></div></div></div></div>
+<ul class="legend kl"><li class="p"><i></i><span data-it="Persone">People</span></li><li class="t"><i></i>Tech</li><li class="z"><i></i>Business</li></ul>
+<div class="scale">
+<div class="sc"><span class="kb" style="--d:6px;opacity:.4"></span><p><b data-it="Non coinvolto">Not involved</b></p></div>
+<div class="sc"><span class="kb" style="--d:14px"></span><p><b data-it="Base">Foundation</b> <span data-it="Usavo questa competenza in un ruolo di supporto: svolgevo attività definite mentre imparavo l&#x27;area.">I used this skill in a supporting role: carrying out defined tasks while learning the area.</span></p></div>
+<div class="sc"><span class="kb" style="--d:24px"></span><p><b data-it="Operativo">Working</b> <span data-it="Lavoravo su questo in autonomia come parte regolare del lavoro, contribuendo direttamente ai risultati.">I worked on this independently as a regular part of the job, contributing directly to results.</span></p></div>
+<div class="sc"><span class="kb" style="--d:36px"></span><p><b data-it="Centrale nel ruolo">Core to the role</b> <span data-it="Era centrale nel ruolo: lo gestivo o lo guidavo e determinava il modo in cui generavo valore.">This was central to the role: I owned or led it, and it shaped how I delivered value.</span></p></div>
+</div>
+</div>
+<div id="vmat" class="panel" hidden>
+<h3 data-it="Le competenze acquisite nel tempo">Skills acquired along the way</h3>
+<p class="hint" data-it="Competenze raggruppate per dominio, fase per fase. La bolla su ogni riga di dominio è il livello del dominio mostrato nella vista Domini.">Skills grouped by domain, phase by phase. The bubble on each domain row is the domain level shown in the Domain view.</p>
+<div class="bbl"><div class="mx"><div></div><div class="mh" data-it="Porsche Eng.&lt;small&gt;2024–oggi&lt;/small&gt;">Porsche Eng.<small>2024–now</small></div><div class="mh">Rummo<small>2021–24</small></div><div class="mh">Rummo<small>2020–21</small></div><div class="mh">Antares<small>2018</small></div><div class="mgl p" data-it="Operations HR">HR operations</div><div class="mgb p"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb p"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb p"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb p"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="ml" data-it="Amministrazione HR e documentale">HR administration &amp; documents</div><div class="mc p" data-l="1" title="Foundation"></div><div class="mc p" data-l="1" title="Foundation"></div><div class="mc p" data-l="3" title="Core to the role"></div><div class="mc p" data-l="3" data-f="1" title="Core to the role"></div><div class="ml" data-it="Presenze e payroll">Time &amp; attendance, payroll</div><div class="mc p" data-l="0" title="Not involved"></div><div class="mc p" data-l="1" title="Foundation"></div><div class="mc p" data-l="3" title="Core to the role"></div><div class="mc p" data-l="2" data-f="1" title="Working"></div><div class="ml" data-it="Selezione e employee relations">Recruitment &amp; employee relations</div><div class="mc p" data-l="0" title="Not involved"></div><div class="mc p" data-l="1" title="Foundation"></div><div class="mc p" data-l="3" data-f="1" title="Core to the role"></div><div class="mc p" data-l="0" title="Not involved"></div><div class="mgl p" data-it="Business partnering">Business partnering</div><div class="mgb p"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb p"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb p"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb p"><span class="mb" style="--d:4px" title="Not involved"></span></div><div class="ml" data-it="Supporto a stakeholder e management">Stakeholder &amp; management support</div><div class="mc p" data-l="3" title="Core to the role"></div><div class="mc p" data-l="2" title="Working"></div><div class="mc p" data-l="1" data-f="1" title="Foundation"></div><div class="mc p" data-l="0" title="Not involved"></div><div class="ml" data-it="Retribuzioni, performance e talent">Compensation, performance &amp; talent</div><div class="mc p" data-l="0" title="Not involved"></div><div class="mc p" data-l="2" title="Working"></div><div class="mc p" data-l="1" data-f="1" title="Foundation"></div><div class="mc p" data-l="0" title="Not involved"></div><div class="ml" data-it="Workforce e skills planning">Workforce &amp; skills planning</div><div class="mc p" data-l="2" title="Working"></div><div class="mc p" data-l="1" data-f="1" title="Foundation"></div><div class="mc p" data-l="0" title="Not involved"></div><div class="mc p" data-l="0" title="Not involved"></div><div class="mgl t" data-it="HRIS">HRIS</div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb t"><span class="mb" style="--d:4px" title="Not involved"></span></div><div class="ml" data-it="Gestione e ottimizzazione HRIS">HRIS management &amp; optimization</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="2" data-f="1" title="Working"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="ml" data-it="Integrazione dei sistemi e adozione">System integration &amp; user adoption</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="2" data-f="1" title="Working"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mgl t" data-it="Processi e automazione">Process &amp; automation</div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb t"><span class="mb" style="--d:4px" title="Not involved"></span></div><div class="ml" data-it="Mappatura di processi e workflow">Process &amp; workflow mapping</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="3" data-f="1" title="Core to the role"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="ml" data-it="Automazione dei workflow e flussi approvativi">Workflow automation &amp; approval flows</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="2" data-f="1" title="Working"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="ml" data-it="Strumenti digitali e mobile interni">Internal digital &amp; mobile tools</div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="3" data-f="1" title="Core to the role"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="ml" data-it="Pianificazione dei turni">Workforce scheduling</div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="1" title="Foundation"></div><div class="mc t" data-l="1" data-f="1" title="Foundation"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mgl t" data-it="Analytics">Analytics</div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb t"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb t"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="ml" data-it="Reporting HR">HR reporting</div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="1" data-f="1" title="Foundation"></div><div class="ml" data-it="Analytics sulla forza lavoro e dashboard">Workforce analytics &amp; dashboards</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="1" data-f="1" title="Foundation"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mgl z" data-it="Sviluppo organizzativo">Org. development</div><div class="mgb z"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb z"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb z"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb z"><span class="mb" style="--d:4px" title="Not involved"></span></div><div class="ml" data-it="Disegno organizzativo (organigrammi, job description)">Org design (charts, job descriptions)</div><div class="mc z" data-l="2" title="Working"></div><div class="mc z" data-l="1" title="Foundation"></div><div class="mc z" data-l="1" data-f="1" title="Foundation"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="ml" data-it="Change management e adozione">Change management &amp; adoption</div><div class="mc z" data-l="3" title="Core to the role"></div><div class="mc z" data-l="2" data-f="1" title="Working"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="ml" data-it="Governance e modelli operativi">Governance &amp; operating models</div><div class="mc z" data-l="2" data-f="1" title="Working"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="mc z" data-l="0" title="Not involved"></div></div></div>
+<ul class="mlg">
+<li><span class="mc t" data-l="1"></span><span data-it="Base">Foundation</span></li>
+<li><span class="mc t" data-l="2"></span><span data-it="Operativo">Working</span></li>
+<li><span class="mc t" data-l="3"></span><span data-it="Centrale nel ruolo">Core to the role</span></li>
+<li><span class="mc t" data-l="3" data-f="1"></span><span data-it="Prima acquisizione">First acquired</span></li>
+<li><span class="mc t" data-l="0"></span><span data-it="Non coinvolto">Not involved</span></li>
+</ul>
+</div>
+<div class="jr" style="margin-top:22px">
+<article class="stage d3"><div class="logo" aria-hidden="true">PE</div><div><span class="tag" data-it="Trasformazione">Transformation</span><span class="tag now" data-it="Oggi">Now</span><h3>Porsche Engineering</h3><span class="org" data-it="Feb 2024 – Oggi · Nardò">Feb 2024 – Present · Nardò</span><div class="steps"><span>HR Digital &amp; Development | Business Partner</span></div><p data-it="Unire HR, business e tecnologia: automazione dei processi, HRIS, analytics sulla forza lavoro e cambiamento organizzativo, con stakeholder di HR, IT e management.">Bringing HR, business and technology together: process automation, HRIS, workforce analytics and organizational change, with stakeholders from HR, IT and management.</p></div></article>
+<article class="stage d2"><div class="logo" aria-hidden="true">R</div><div><span class="tag" data-it="Dalle operations al digital partnering">From operations to digital partnering</span><h3>Rummo</h3><span class="org" data-it="Gen 2020 – Gen 2024 · Benevento / New York (da remoto)">Jan 2020 – Jan 2024 · Benevento / New York (remote)</span><div class="steps"><span>HR Assistant</span> <i>→</i> <span>HR Generalist</span> <i>→</i> <span>HR Digital Transformation Coordinator | Jr HR Business Partner</span></div><p data-it="Tre passaggi nella stessa azienda: da payroll e time &amp;amp; attendance, a selezione, employee relations e reporting, fino a guidare la trasformazione digitale HR: moduli HRIS Zucchetti, mappatura dei workflow, strumenti interni e mobile e HR business partnering per gli Stati Uniti.">Three steps in one company: from payroll and time &amp; attendance, to recruitment, employee relations and reporting, to leading HR digital transformation: Zucchetti HRIS modules, workflow mapping, internal and mobile tools, and U.S. HR business partnering.</p></div></article>
+<article class="stage d1"><div class="logo" aria-hidden="true">AN</div><div><span class="tag" data-it="Ingresso in HR">Entry into HR</span><h3>Antares Srl</h3><span class="org" data-it="Giu – Dic 2018 · Caserta">Jun – Dec 2018 · Caserta</span><div class="steps"><span>HR Generalist Intern</span></div><p data-it="Imparare l&#x27;HR partendo dalle basi: monitoraggio delle presenze, gestione documentale e operatività HR quotidiana.">Learning HR from the ground up: attendance monitoring, document management and daily HR operations.</p></div></article>
+</div>
+<button class="btn2" id="fullbtn" type="button" aria-expanded="false">Show full role descriptions</button>
+<div id="full" hidden>
 <div class="tl">
 
 <details open>
-<summary><span class="when">Feb 2024 – Present</span><h3>HR Digital &amp; Development | Business Partner</h3><span class="org">Porsche Engineering · Nardò, Italy</span></summary>
+<summary><span class="when" data-it="Feb 2024 – Oggi">Feb 2024 – Present</span><h3>HR Digital &amp; Development | Business Partner</h3><span class="org" data-it="Porsche Engineering · Nardò, Italia">Porsche Engineering · Nardò, Italy</span></summary>
 <div class="body"><ul>
-<li>Support strategic and cross-functional initiatives across HR, business and technology, combining HR Business Partnering with digital transformation, organizational development and project management.</li>
-<li>Coordinate business transformation, process improvement and digitalization initiatives, translating organizational needs into structured projects, process changes and technology-enabled solutions.</li>
-<li>Lead and support HR digital projects across the HR systems landscape, ensuring stakeholder alignment, project follow-up, timely adjustments and value-driven implementation.</li>
-<li>Analyze and optimize HR processes, workflows and approval flows, identifying opportunities for simplification, automation, standardization and continuous improvement.</li>
-<li>Manage and optimize HR Information Systems, supporting data integrity, system effectiveness, user adoption and integration between HR, IT and business stakeholders.</li>
-<li>Consolidate and analyze organizational and workforce data to develop reporting and management insights supporting workforce planning, organizational decisions and business priorities.</li>
-<li>Support organizational change initiatives as liaison between HR, IT, management and operational stakeholders, facilitating communication, adoption and implementation.</li>
-<li>Prepare management reporting, presentations and project materials, monitor milestones and follow-up actions, and contribute to governance, procedures and operating models.</li>
+<li data-it="Supporto iniziative strategiche e cross-funzionali tra HR, business e tecnologia, combinando HR Business Partnering con trasformazione digitale, sviluppo organizzativo e project management.">Support strategic and cross-functional initiatives across HR, business and technology, combining HR Business Partnering with digital transformation, organizational development and project management.</li>
+<li data-it="Coordino iniziative di business transformation, miglioramento dei processi e digitalizzazione, traducendo le esigenze organizzative in progetti strutturati, cambiamenti di processo e soluzioni abilitate dalla tecnologia.">Coordinate business transformation, process improvement and digitalization initiatives, translating organizational needs into structured projects, process changes and technology-enabled solutions.</li>
+<li data-it="Guido e supporto progetti HR digitali sul panorama dei sistemi HR, garantendo allineamento degli stakeholder, follow-up dei progetti, aggiustamenti tempestivi e implementazioni orientate al valore.">Lead and support HR digital projects across the HR systems landscape, ensuring stakeholder alignment, project follow-up, timely adjustments and value-driven implementation.</li>
+<li data-it="Analizzo e ottimizzo processi, workflow e flussi approvativi HR, individuando opportunità di semplificazione, automazione, standardizzazione e miglioramento continuo.">Analyze and optimize HR processes, workflows and approval flows, identifying opportunities for simplification, automation, standardization and continuous improvement.</li>
+<li data-it="Gestisco e ottimizzo gli HR Information System, supportando integrità dei dati, efficacia dei sistemi, adozione da parte degli utenti e integrazione tra HR, IT e business.">Manage and optimize HR Information Systems, supporting data integrity, system effectiveness, user adoption and integration between HR, IT and business stakeholders.</li>
+<li data-it="Consolido e analizzo dati organizzativi e della forza lavoro per sviluppare reporting e insight di management a supporto di workforce planning, decisioni organizzative e priorità di business.">Consolidate and analyze organizational and workforce data to develop reporting and management insights supporting workforce planning, organizational decisions and business priorities.</li>
+<li data-it="Supporto le iniziative di change organizzativo come punto di collegamento tra HR, IT, management e stakeholder operativi, facilitando comunicazione, adozione e implementazione.">Support organizational change initiatives as liaison between HR, IT, management and operational stakeholders, facilitating communication, adoption and implementation.</li>
+<li data-it="Preparo reporting per il management, presentazioni e materiali di progetto, monitoro milestone e azioni di follow-up e contribuisco a governance, procedure e modelli operativi.">Prepare management reporting, presentations and project materials, monitor milestones and follow-up actions, and contribute to governance, procedures and operating models.</li>
 </ul></div>
 </details>
 
 <details>
-<summary><span class="when">Oct 2021 – Jan 2024</span><h3>HR Digital Transformation Project Coordinator | Junior HR Business Partner</h3><span class="org">Rummo Group / Rummo USA · Benevento, Italy / New York, USA (remote)</span></summary>
+<summary><span class="when" data-it="Ott 2021 – Gen 2024">Oct 2021 – Jan 2024</span><h3>HR Digital Transformation Project Coordinator | Junior HR Business Partner</h3><span class="org" data-it="Rummo Group / Rummo USA · Benevento, Italia / New York, USA (da remoto)">Rummo Group / Rummo USA · Benevento, Italy / New York, USA (remote)</span></summary>
 <div class="body"><ul>
-<li>Coordinated HR digital transformation initiatives, combining HR process redesign, HRIS management, workflow mapping, internal tool development and change enablement.</li>
-<li>Managed and maintained Zucchetti Infinity HR modules (HCM, Performance, Time &amp; Attendance and Payroll), supporting system effectiveness and HR process digitalization.</li>
-<li>Mapped HR processes and workflows, identified improvement opportunities and implemented optimized procedures, tools and operating practices.</li>
-<li>Designed and implemented internal digital tools and mobile solutions to streamline workforce-related activities, resource allocation and stakeholder collaboration.</li>
-<li>Supported U.S. HR Business Partnering: employee relations, compensation reviews, benchmarking, budgeting, performance, talent and succession management.</li>
-<li>Prepared HR analysis and reporting to support management decisions, resource allocation and organizational development.</li>
+<li data-it="Ho coordinato iniziative di trasformazione digitale HR, combinando ridisegno dei processi HR, gestione dell&#x27;HRIS, mappatura dei workflow, sviluppo di strumenti interni e change enablement.">Coordinated HR digital transformation initiatives, combining HR process redesign, HRIS management, workflow mapping, internal tool development and change enablement.</li>
+<li data-it="Ho gestito e mantenuto i moduli HR di Zucchetti Infinity (HCM, Performance, Time &amp;amp; Attendance e Payroll), supportando l&#x27;efficacia del sistema e la digitalizzazione dei processi HR.">Managed and maintained Zucchetti Infinity HR modules (HCM, Performance, Time &amp; Attendance and Payroll), supporting system effectiveness and HR process digitalization.</li>
+<li data-it="Ho mappato processi e workflow HR, individuato opportunità di miglioramento e implementato procedure, strumenti e pratiche operative ottimizzate.">Mapped HR processes and workflows, identified improvement opportunities and implemented optimized procedures, tools and operating practices.</li>
+<li data-it="Ho progettato e implementato strumenti digitali interni e soluzioni mobile per semplificare le attività legate alla forza lavoro, l&#x27;allocazione delle risorse e la collaborazione tra stakeholder.">Designed and implemented internal digital tools and mobile solutions to streamline workforce-related activities, resource allocation and stakeholder collaboration.</li>
+<li data-it="Ho supportato le attività di HR Business Partnering per gli Stati Uniti: employee relations, revisioni retributive, benchmarking, budgeting, performance, talent e succession management.">Supported U.S. HR Business Partnering: employee relations, compensation reviews, benchmarking, budgeting, performance, talent and succession management.</li>
+<li data-it="Ho preparato analisi e reporting HR a supporto delle decisioni del management, dell&#x27;allocazione delle risorse e dello sviluppo organizzativo.">Prepared HR analysis and reporting to support management decisions, resource allocation and organizational development.</li>
 </ul></div>
 </details>
 
 <details>
-<summary><span class="when">Sep 2020 – Oct 2021</span><h3>HR Generalist</h3><span class="org">Rummo S.p.A. · Benevento, Italy</span></summary>
+<summary><span class="when" data-it="Set 2020 – Ott 2021">Sep 2020 – Oct 2021</span><h3>HR Generalist</h3><span class="org" data-it="Rummo S.p.A. · Benevento, Italia">Rummo S.p.A. · Benevento, Italy</span></summary>
 <div class="body"><ul>
-<li>Managed recruitment, employee relations, organizational data, reporting and workforce scheduling, supporting day-to-day HR operations and business requirements.</li>
-<li>Prepared organizational charts, job descriptions and HR reporting, maintaining accurate workforce and compensation information.</li>
-<li>Supported management and operational departments on workforce, compliance and employee-related matters.</li>
+<li data-it="Ho gestito selezione, employee relations, dati organizzativi, reporting e pianificazione dei turni, supportando l&#x27;operatività HR quotidiana e le esigenze del business.">Managed recruitment, employee relations, organizational data, reporting and workforce scheduling, supporting day-to-day HR operations and business requirements.</li>
+<li data-it="Ho preparato organigrammi, job description e reporting HR, mantenendo accurate le informazioni su forza lavoro e retribuzioni.">Prepared organizational charts, job descriptions and HR reporting, maintaining accurate workforce and compensation information.</li>
+<li data-it="Ho supportato il management e i reparti operativi su temi di forza lavoro, compliance e questioni relative ai dipendenti.">Supported management and operational departments on workforce, compliance and employee-related matters.</li>
 </ul></div>
 </details>
 
 <details>
-<summary><span class="when">Jan 2020 – Sep 2020</span><h3>HR Assistant (maternity leave contract)</h3><span class="org">Rummo S.p.A. · Benevento, Italy</span></summary>
+<summary><span class="when" data-it="Gen 2020 – Set 2020">Jan 2020 – Sep 2020</span><h3>HR Assistant (maternity leave contract)</h3><span class="org" data-it="Rummo S.p.A. · Benevento, Italia">Rummo S.p.A. · Benevento, Italy</span></summary>
 <div class="body"><ul>
-<li>Supported HR administration in payroll, time and attendance, data management, reporting, employee queries and training coordination using Zucchetti systems and HR databases.</li>
+<li data-it="Ho supportato l&#x27;amministrazione HR su payroll, time &amp;amp; attendance, gestione dati, reporting, richieste dei dipendenti e coordinamento della formazione, utilizzando sistemi Zucchetti e database HR.">Supported HR administration in payroll, time and attendance, data management, reporting, employee queries and training coordination using Zucchetti systems and HR databases.</li>
 </ul></div>
 </details>
 
 <details>
-<summary><span class="when">Jun 2018 – Dec 2018</span><h3>HR Generalist Intern</h3><span class="org">Antares Srl · Caserta, Italy</span></summary>
+<summary><span class="when" data-it="Giu 2018 – Dic 2018">Jun 2018 – Dec 2018</span><h3>HR Generalist Intern</h3><span class="org" data-it="Antares Srl · Caserta, Italia">Antares Srl · Caserta, Italy</span></summary>
 <div class="body"><ul>
-<li>Supported HR administration in attendance monitoring, document management and daily HR operations.</li>
+<li data-it="Ho supportato l&#x27;amministrazione HR nel monitoraggio delle presenze, nella gestione documentale e nelle attività HR quotidiane.">Supported HR administration in attendance monitoring, document management and daily HR operations.</li>
 </ul></div>
 </details>
 
 <details>
-<summary><span class="when">Jan 2017 – Feb 2017</span><h3>Logistic Assistant</h3><span class="org">Adorno Srl · Reggio Emilia, Italy</span></summary>
+<summary><span class="when" data-it="Gen 2017 – Feb 2017">Jan 2017 – Feb 2017</span><h3>Logistic Assistant</h3><span class="org" data-it="Adorno Srl · Reggio Emilia, Italia">Adorno Srl · Reggio Emilia, Italy</span></summary>
 <div class="body"><ul>
-<li>Supported process and operational efficiency through a Warehouse Management System (WMS) for inventory tracking and material management.</li>
-<li>Maintained accurate digital records of stock levels and incoming/outgoing materials, ensuring data accuracy and traceability.</li>
-<li>Monitored material flows and inventory movements, supporting the optimization of operational activities and availability of components.</li>
+<li data-it="Ho supportato l&#x27;efficienza di processo e operativa tramite un Warehouse Management System (WMS) per il tracciamento delle scorte e la gestione dei materiali.">Supported process and operational efficiency through a Warehouse Management System (WMS) for inventory tracking and material management.</li>
+<li data-it="Ho mantenuto registrazioni digitali accurate dei livelli di stock e dei materiali in entrata e in uscita, garantendo accuratezza dei dati e tracciabilità.">Maintained accurate digital records of stock levels and incoming/outgoing materials, ensuring data accuracy and traceability.</li>
+<li data-it="Ho monitorato i flussi di materiali e i movimenti di magazzino, supportando l&#x27;ottimizzazione delle attività operative e la disponibilità dei componenti.">Monitored material flows and inventory movements, supporting the optimization of operational activities and availability of components.</li>
 </ul></div>
 </details>
 
 </div>
+</div>
 </section>
 
 <section id="expertise">
-<h2>Expertise &amp; tools</h2>
+<h2 data-it="Competenze e strumenti">Expertise &amp; tools</h2>
 <div class="cols">
 <div>
-<h3>Core expertise</h3>
-<div class="filters" role="group" aria-label="Filter expertise"><button type="button" data-f="all" aria-pressed="true">All</button><button type="button" data-f="people" aria-pressed="false">People</button><button type="button" data-f="tech" aria-pressed="false">Tech</button><button type="button" data-f="biz" aria-pressed="false">Business</button></div>
+<h3 data-it="Competenze chiave">Core expertise</h3>
+<div class="filters" role="group" aria-label="Filter expertise"><button type="button" data-f="all" aria-pressed="true" data-it="Tutte">All</button><button type="button" data-f="people" aria-pressed="false" data-it="Persone">People</button><button type="button" data-f="tech" aria-pressed="false" data-it="Tech">Tech</button><button type="button" data-f="biz" aria-pressed="false">Business</button></div>
 <ul class="chips" id="core">
 <li>Business &amp; Organizational Development</li><li>Business Transformation</li><li>Business Partner</li><li>Process Improvement</li><li>Project Management</li><li>HR Transformation</li><li>HRIS &amp; HR Technology</li><li>Analytics</li><li>Digitalization &amp; Automation</li><li>AI MCP Automations</li><li>Change Management</li><li>Governance &amp; Operating Processes</li><li>Stakeholder Management</li><li>Reporting</li><li>Skills &amp; Workforce Planning</li><li>Training Design</li>
 </ul>
 </div>
 <div>
-<h3>Digital &amp; professional tools</h3>
+<h3 data-it="Strumenti digitali e professionali">Digital &amp; professional tools</h3>
 <ul class="chips">
 <li>SAP SuccessFactors</li><li>Zucchetti Infinity</li><li>Power BI</li><li>Microsoft 365</li><li>Power Automate</li><li>Power Apps</li><li>Microsoft Planner</li><li>Excel</li><li>PowerPoint</li><li>Visio</li><li>Jira</li><li>Confluence</li><li>SAP Signavio</li><li>Learn365</li><li>Draw.io</li><li>MS Access / Visual Basic</li><li>Copilot Studio</li><li>Arxivar</li><li>G-Suite Enterprise</li><li>Infobusiness</li><li>Board BI</li><li>Stages</li>
 </ul>
@@ -249,15 +359,15 @@ section{margin-bottom:22px}
 </section>
 
 <section id="impact">
-<h2>My Projects Impact</h2>
-<p>Time saved by replacing manual work with automated, integrated solutions across five HR digital projects.</p>
+<h2 data-it="Impatto dei miei progetti">My Projects Impact</h2>
+<p data-it="Tempo risparmiato sostituendo il lavoro manuale con soluzioni automatizzate e integrate in cinque progetti digitali HR.">Time saved by replacing manual work with automated, integrated solutions across five HR digital projects.</p>
 <div class="kpis">
-<div><b><span id="total" data-n="19">19</span> h</b><span>saved every week</span></div>
-<div><b>≈ 0.5 FTE</b><span>capacity released</span></div>
-<div><b>5</b><span>projects in 3 domains</span></div>
+<div><b><span id="total" data-n="19">19</span> h</b><span data-it="risparmiate ogni settimana">saved every week</span></div>
+<div><b>≈ 0.5 FTE</b><span data-it="capacità liberata">capacity released</span></div>
+<div><b>5</b><span data-it="progetti in 3 aree">projects in 3 domains</span></div>
 </div>
 <div class="panel">
-<h3>Where the time came from</h3>
+<h3 data-it="Da dove arriva il tempo risparmiato">Where the time came from</h3>
 <div class="stack" role="img" aria-label="Share of weekly hours saved: Data Visualization 53%, Process Redesign 37%, Tool Implementation 10%">
 <span class="d1" style="--w:52.6%"></span><span class="d2" style="--w:36.8%"></span><span class="d3" style="--w:10.5%"></span>
 </div>
@@ -268,41 +378,41 @@ section{margin-bottom:22px}
 </ul>
 </div>
 <div class="panel">
-<div class="grp"><h3><i class="dot d1"></i>Data Visualization <small>10 h/week</small></h3>
-<div class="row d1"><div class="meta"><b>SAP and Power BI integration</b><span>Before: manual reporting</span></div><div class="bar" style="--w:25%"><i></i></div><div class="val">2 h/week</div></div>
-<div class="row d1"><div class="meta"><b>Fabric data lake KPI reporting</b><span>Before: manual reporting</span></div><div class="bar" style="--w:100%"><i></i></div><div class="val">8 h/week</div></div></div>
-<div class="grp"><h3><i class="dot d2"></i>Process Redesign <small>7 h/week</small></h3>
-<div class="row d2"><div class="meta"><b>Access control: Arxivar implementation</b><span>Before: manual reporting</span></div><div class="bar" style="--w:62.5%"><i></i></div><div class="val">5 h/week</div></div>
-<div class="row d2"><div class="meta"><b>Report sharing with RBAC</b><span>Before: manual email sending</span></div><div class="bar" style="--w:25%"><i></i></div><div class="val">2 h/week</div></div></div>
-<div class="grp"><h3><i class="dot d3"></i>Tool Implementation <small>2 h/week</small></h3>
-<div class="row d3"><div class="meta"><b>LMS implementation</b><span>Before: manual training management</span></div><div class="bar" style="--w:25%"><i></i></div><div class="val">2 h/week</div></div></div>
-<p class="note">Hours saved per week. FTE equivalent calculated at 1 FTE = 40 hours/week. All bars share one scale.</p>
+<div class="grp"><h3><i class="dot d1"></i>Data Visualization <small data-it="10 h/settimana">10 h/week</small></h3>
+<div class="row d1"><div class="meta"><b>SAP and Power BI integration</b><span data-it="Prima: reporting manuale">Before: manual reporting</span></div><div class="bar" style="--w:25%"><i></i></div><div class="val" data-it="2 h/settimana">2 h/week</div></div>
+<div class="row d1"><div class="meta"><b>Fabric data lake KPI reporting</b><span data-it="Prima: reporting manuale">Before: manual reporting</span></div><div class="bar" style="--w:100%"><i></i></div><div class="val" data-it="8 h/settimana">8 h/week</div></div></div>
+<div class="grp"><h3><i class="dot d2"></i>Process Redesign <small data-it="7 h/settimana">7 h/week</small></h3>
+<div class="row d2"><div class="meta"><b>Access control: Arxivar implementation</b><span data-it="Prima: reporting manuale">Before: manual reporting</span></div><div class="bar" style="--w:62.5%"><i></i></div><div class="val" data-it="5 h/settimana">5 h/week</div></div>
+<div class="row d2"><div class="meta"><b>Report sharing with RBAC</b><span data-it="Prima: invio manuale di email">Before: manual email sending</span></div><div class="bar" style="--w:25%"><i></i></div><div class="val" data-it="2 h/settimana">2 h/week</div></div></div>
+<div class="grp"><h3><i class="dot d3"></i>Tool Implementation <small data-it="2 h/settimana">2 h/week</small></h3>
+<div class="row d3"><div class="meta"><b>LMS implementation</b><span data-it="Prima: gestione manuale della formazione">Before: manual training management</span></div><div class="bar" style="--w:25%"><i></i></div><div class="val" data-it="2 h/settimana">2 h/week</div></div></div>
+<p class="note" data-it="Ore risparmiate a settimana. Equivalente FTE calcolato con 1 FTE = 40 ore a settimana. Tutte le barre usano la stessa scala.">Hours saved per week. FTE equivalent calculated at 1 FTE = 40 hours/week. All bars share one scale.</p>
 </div>
 </section>
 
 <section id="education">
-<h2>Education</h2>
+<h2 data-it="Formazione">Education</h2>
 <div class="edu">
-<div><b>Bachelor Degree in Law</b><span>Università degli Studi di Cassino e del Lazio Meridionale · Sep 2015 – Jul 2019 · Focus: Labor Law and Administrative Law</span></div>
-<div><b>Music Business and Modern Guitar <em class="pill">Scholarship winner</em></b><span>ICMP Institute of Contemporary Music Performance, London · Jan 2013 – Jun 2013</span></div>
-<div><b>High school Geometer Diploma</b><span>ISISS Michelangelo Buonarroti, Caserta · Sep 2006 – Jul 2011 · Project 5 (Experimental Program)</span></div>
-<div><b>Software Engineering Internship <em class="pill">Scholarship winner</em></b><span>Politecnico di Milano · 2010</span></div>
+<div><b>Bachelor Degree in Law</b><span data-it="Università degli Studi di Cassino e del Lazio Meridionale · Set 2015 – Lug 2019 · Focus: Diritto del lavoro e Diritto amministrativo">Università degli Studi di Cassino e del Lazio Meridionale · Sep 2015 – Jul 2019 · Focus: Labor Law and Administrative Law</span></div>
+<div><b data-it="Music Business and Modern Guitar &lt;em class=&quot;pill&quot;&gt;Vincitore di borsa di studio&lt;/em&gt;">Music Business and Modern Guitar <em class="pill">Scholarship winner</em></b><span data-it="ICMP Institute of Contemporary Music Performance, Londra · Gen 2013 – Giu 2013">ICMP Institute of Contemporary Music Performance, London · Jan 2013 – Jun 2013</span></div>
+<div><b data-it="Diploma di Geometra">High school Geometer Diploma</b><span data-it="ISISS Michelangelo Buonarroti, Caserta · Set 2006 – Lug 2011 · Progetto 5 (programma sperimentale)">ISISS Michelangelo Buonarroti, Caserta · Sep 2006 – Jul 2011 · Project 5 (Experimental Program)</span></div>
+<div><b data-it="Stage in Software Engineering &lt;em class=&quot;pill&quot;&gt;Vincitore di borsa di studio&lt;/em&gt;">Software Engineering Internship <em class="pill">Scholarship winner</em></b><span data-it="Politecnico di Milano · 2010">Politecnico di Milano · 2010</span></div>
 </div>
 </section>
 
 <section id="beyond">
-<h2>Languages &amp; interests</h2>
+<h2 data-it="Lingue e interessi">Languages &amp; interests</h2>
 <div class="cols">
 <div>
-<h3>Languages</h3>
-<ul class="chips"><li>Italian – Native</li><li>English – Full professional proficiency (C1)</li></ul>
+<h3 data-it="Lingue">Languages</h3>
+<ul class="chips"><li data-it="Italiano – Madrelingua">Italian – Native</li><li data-it="Inglese – Padronanza professionale completa (C1)">English – Full professional proficiency (C1)</li></ul>
 </div>
 <div>
-<h3>Sports</h3>
-<ul class="chips"><li>Tennis</li><li>Water polo</li><li>Running</li><li>Gym</li><li>Golf</li><li>Trekking</li></ul>
+<h3 data-it="Sport">Sports</h3>
+<ul class="chips"><li>Tennis</li><li data-it="Pallanuoto">Water polo</li><li data-it="Corsa">Running</li><li data-it="Palestra">Gym</li><li>Golf</li><li>Trekking</li></ul>
 </div>
 </div>
-<p style="margin-top:18px">Music is a constant: guitar (I have taught modern guitar since 2015), piano, drums and composition. I enjoy meeting people from diverse cultural backgrounds, as I did during my years in London and whenever I travel to new places.</p>
+<p style="margin-top:18px" data-it="La musica è una costante: chitarra (insegno chitarra moderna dal 2015), pianoforte, batteria e composizione. Mi piace incontrare persone di culture diverse, come ho fatto negli anni a Londra e ogni volta che viaggio in posti nuovi.">Music is a constant: guitar (I have taught modern guitar since 2015), piano, drums and composition. I enjoy meeting people from diverse cultural backgrounds, as I did during my years in London and whenever I travel to new places.</p>
 </section>
 
 <footer>Carlo Coronato · Business &amp; Organizational Development / HR Transformation</footer>
@@ -318,7 +428,7 @@ var exp=$('#expand');
 exp.addEventListener('click',function(){
 var open=all.some(function(d){return !d.open});
 all.forEach(function(d){d.open=open});
-exp.textContent=open?'Collapse all roles':'Expand all roles';
+expOn=open;updL();
 });
 $('#theme').addEventListener('click',function(){
 root.setAttribute('data-cv',root.getAttribute('data-cv')==='light'?'dark':'light');
@@ -340,6 +450,23 @@ var bars=[].slice.call(document.querySelectorAll('.bar')),tot=document.getElemen
 function showImpact(){if(done)return;done=true;bars.forEach(function(b){b.classList.add('in')});var n=+tot.dataset.n,t0=null;if(matchMedia('(prefers-reduced-motion: reduce)').matches){tot.textContent=n;return}tot.textContent=0;function step(t){if(!t0)t0=t;var k=Math.min((t-t0)/1100,1);tot.textContent=Math.round(n*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step)}requestAnimationFrame(step)}
 window.addEventListener('beforeprint',function(){done=true;bars.forEach(function(b){b.classList.add('in')});tot.textContent=tot.dataset.n});
 if('IntersectionObserver' in window){var io2=new IntersectionObserver(function(es){if(es[0].isIntersecting){showImpact();io2.disconnect()}},{threshold:.2});io2.observe(document.getElementById('impact'))}else{showImpact()}
+var fb2=document.getElementById('fullbtn'),fu=document.getElementById('full');
+fb2.addEventListener('click',function(){var h=fu.hidden;fu.hidden=!h;fb2.setAttribute('aria-expanded',h);fullOn=h;updL()});
+window.addEventListener('beforeprint',function(){fu.hidden=false});
+var curLang='en',expOn=false,fullOn=false;
+function updL(){var it=curLang==='it';exp.textContent=it?(expOn?'Comprimi tutti i ruoli':'Espandi tutti i ruoli'):(expOn?'Collapse all roles':'Expand all roles');fb2.textContent=it?(fullOn?'Nascondi le descrizioni complete':'Mostra le descrizioni complete'):(fullOn?'Hide full role descriptions':'Show full role descriptions')}
+function setLang(l){curLang=l;document.documentElement.lang=l;[].forEach.call(document.querySelectorAll('[data-it]'),function(e){if(e.dataset.en===undefined)e.dataset.en=e.innerHTML;e.innerHTML=l==='it'?e.dataset.it:e.dataset.en});updL();if(bos)setPh(curPh);var b=$('#lang');b.textContent=l==='it'?'English':'Italiano';b.setAttribute('aria-label',l==='it'?'Switch to English':"Passa all'italiano")}
+$('#lang').addEventListener('click',function(){setLang(curLang==='it'?'en':'it')});
+if(/[?&]lang=it/.test(location.search))setLang('it');
+var ROLES=['HR Generalist Intern','HR Assistant \u2192 HR Generalist','HR Digital Transformation Coordinator | Jr HR Business Partner','HR Digital & Development | Business Partner'],LN={en:['Not involved','Foundation','Working','Core'],it:['Non coinvolto','Base','Operativo','Centrale']},LV=[[3,3,1,1],[0,1,2,3],[0,2,3,3],[0,1,3,3],[1,2,2,3],[0,1,2,3]],DSZ=[2.5,8,14,20],cmap=[2,1,1,0],curPh=3,timer=null;
+var bos=[].slice.call(document.querySelectorAll('.bo')),pcs=[].slice.call(document.querySelectorAll('.pc')),cardEls=[].slice.call(document.querySelectorAll('.jr .stage')),vdom=document.getElementById('vdom'),vmat=document.getElementById('vmat'),segb=[].slice.call(document.querySelectorAll('.seg button'));
+function setPh(i){curPh=i;pcs.forEach(function(c,k){c.setAttribute('aria-pressed',k===i)});bos.forEach(function(b,d){var l=LV[d][i];b.style.setProperty('--d',DSZ[l]+'cqw');b.dataset.l=l;b.parentNode.parentNode.classList.toggle('off',l===0)});cardEls.forEach(function(c,k){c.classList.toggle('hl',k===cmap[i])});document.getElementById('cap').innerHTML='<b>'+pcs[i].innerHTML.replace('<small>','\u00b7 ').replace('</small>','')+'</b>'+ROLES[i];[].forEach.call(document.querySelectorAll('.bs'),function(e,d){e.textContent=LN[curLang==='it'?'it':'en'][LV[d][i]]})}
+function stopP(){if(timer){clearInterval(timer);timer=null}}
+pcs.forEach(function(c,k){c.addEventListener('click',function(){stopP();setPh(k)})});
+document.getElementById('play').addEventListener('click',function(){stopP();var i=0;setPh(0);timer=setInterval(function(){i++;setPh(i);if(i>=3)stopP()},2000)});
+function setView(v){segb.forEach(function(t){t.setAttribute('aria-selected',t.dataset.v===v)});vdom.hidden=v!=='dom';vmat.hidden=v!=='mat';stopP();if(v==='dom')setPh(curPh);else cardEls.forEach(function(c){c.classList.remove('hl')})}
+segb.forEach(function(t){t.addEventListener('click',function(){setView(t.dataset.v)})});
+setPh(3);
 var links=[].slice.call(document.querySelectorAll('nav a'));
 var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
 if('IntersectionObserver' in window){
