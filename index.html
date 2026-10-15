@@ -17,9 +17,9 @@
 :root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
 --font:Calibri,Carlito,-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Helvetica,Arial,sans-serif;
 --bg:#f5f5f7;--panel:#fff;--ink:#1d1d1f;--mute:#5f6368;--line:#e3e3e8;--glass:rgba(255,255,255,.72);
---tech:#0071e3;--people:#e5533d;--biz:#6f55e0;--accent:var(--tech);
---tech-s:#e3f0fd;--people-s:#fde9e5;--biz-s:#ece8fc}
-:root[data-cv="dark"]{--bg:#000;--panel:#1c1c1e;--ink:#f5f5f7;--mute:#a1a1a6;--line:#2c2c2e;--glass:rgba(28,28,30,.72);--tech:#2997ff;--people:#ff7a62;--biz:#a58bff;--tech-s:#12304d;--people-s:#4a2119;--biz-s:#2c2552}
+--tech:#0071e3;--admin:#e5533d;--people:#1fa391;--biz:#6f55e0;--accent:var(--tech);
+--tech-s:#e3f0fd;--admin-s:#fde9e5;--people-s:#dcf3ef;--biz-s:#ece8fc}
+:root[data-cv="dark"]{--bg:#000;--panel:#1c1c1e;--ink:#f5f5f7;--mute:#a1a1a6;--line:#2c2c2e;--glass:rgba(28,28,30,.72);--tech:#2997ff;--admin:#ff7a62;--people:#3ccbb8;--biz:#a58bff;--tech-s:#12304d;--admin-s:#4a2119;--people-s:#12423b;--biz-s:#2c2552}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 var(--font);-webkit-font-smoothing:antialiased}
@@ -28,7 +28,7 @@ a{color:var(--tech)}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--tech);outline-offset:3px;border-radius:8px}
 .layout{display:grid;grid-template-columns:320px 1fr;min-height:100vh}
 aside{background:var(--glass);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-right:1px solid var(--line);padding:52px 30px 36px;position:sticky;top:0;align-self:start;height:100vh;overflow:auto;display:flex;flex-direction:column;gap:28px}
-aside::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,var(--tech),var(--biz),var(--people))}
+aside::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,var(--tech),var(--biz),var(--admin))}
 aside h1{font-size:2.5rem}
 .role{color:var(--mute);font-size:1rem;margin:10px 0 0}
 .contact{list-style:none;padding:0;margin:0;display:grid;gap:10px;font-size:1rem}
@@ -57,7 +57,7 @@ p{margin:0 0 14px;color:var(--mute);max-width:66ch}
 .filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
 .filters button{font:inherit;font-size:.85rem;font-weight:600;border:1px solid var(--line);background:var(--panel);color:var(--mute);padding:4px 12px;border-radius:999px;cursor:pointer}
 .filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-.tl{display:grid;gap:14px;padding-left:24px;border-left:3px solid transparent;border-image:linear-gradient(var(--tech),var(--biz),var(--people)) 1}
+.tl{display:grid;gap:14px;padding-left:24px;border-left:3px solid transparent;border-image:linear-gradient(var(--tech),var(--biz),var(--admin)) 1}
 details{background:var(--panel);border-radius:18px;position:relative;box-shadow:0 1px 2px rgba(0,0,0,.05),0 4px 16px rgba(0,0,0,.04)}
 details::before{content:"";position:absolute;left:-34px;top:26px;width:13px;height:13px;border-radius:50%;background:var(--bg);border:3px solid var(--tech)}
 details[open]::before{background:var(--tech)}
@@ -77,9 +77,9 @@ details[open] summary::after{content:"–"}
 .edu div{background:var(--panel);border-radius:14px;padding:14px 18px}
 .edu b{display:block;font-weight:700}
 .edu span{color:var(--mute);font-size:.95rem}
-.pill{display:inline-block;background:var(--people-s);color:var(--people);border-radius:999px;padding:1px 10px;font-size:.78rem;font-style:normal;margin-left:6px}
+.pill{display:inline-block;background:var(--admin-s);color:var(--admin);border-radius:999px;padding:1px 10px;font-size:.78rem;font-style:normal;margin-left:6px}
 footer{color:var(--mute);font-size:.9rem}
-.d1{--c:var(--tech)}.d2{--c:var(--biz)}.d3{--c:var(--people)}
+.d1{--c:var(--tech)}.d2{--c:var(--biz)}.d3{--c:var(--admin)}
 .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:0 0 18px}
 .kpis div{background:var(--panel);border-radius:18px;padding:18px 20px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
 .kpis b{display:block;font-size:2.4rem;line-height:1.1;letter-spacing:-.03em}
@@ -112,7 +112,7 @@ footer{color:var(--mute);font-size:.9rem}
 .logo img{width:100%;height:100%;object-fit:contain;padding:8px}
 .stage h3{font-size:1.25rem;margin-top:6px}
 .tag{display:inline-block;font-size:.8rem;font-weight:700;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent);padding:2px 10px;border-radius:999px}
-.tag.now{--c:var(--people);margin-left:6px}
+.tag.now{--c:var(--admin);margin-left:6px}
 .steps{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:10px 0 8px}
 .steps span{background:var(--bg);padding:3px 12px;border-radius:999px;font-size:.9rem;font-weight:600}
 .steps i{font-style:normal;color:var(--mute)}
@@ -136,7 +136,7 @@ footer{color:var(--mute);font-size:.9rem}
 .btn2:hover{border-color:var(--tech);color:var(--tech)}
 @media (max-width:860px){.stage{grid-template-columns:1fr;gap:12px}}
 @media print{#full[hidden]{display:block}.btn2{display:none}}
-.p{--c:var(--people)}.t{--c:var(--tech)}.z{--c:var(--biz)}
+.a{--c:var(--admin)}.p{--c:var(--people)}.t{--c:var(--tech)}.z{--c:var(--biz)}
 .bs{font-size:clamp(.6rem,1.6cqw,.8rem);color:var(--mute);font-weight:600;margin-top:1px}
 .cap{margin:4px 0 8px;color:var(--mute);min-height:2.9em}.cap b{color:var(--ink);font-size:1.15rem;display:block}
 .seg{display:inline-flex;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px;margin:2px 0 16px}
@@ -178,6 +178,91 @@ footer{color:var(--mute);font-size:.9rem}
 .mc[data-f]::before{content:"\2605";position:absolute;top:-1px;right:5px;font-size:.72rem;line-height:1.3;letter-spacing:0}
 .mlg{list-style:none;display:flex;flex-wrap:wrap;gap:8px 22px;padding:0;margin:18px 0 0;font-size:.9rem;color:var(--mute)}
 .mlg li{display:flex;align-items:center;gap:8px}.mlg .mc{width:42px;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--glass);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 84px)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:25;display:flex;align-items:center;gap:14px;padding:10px clamp(14px,3vw,36px);background:var(--glass);-webkit-backdrop-filter:saturate(180%) blur(18px);backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line)}
+.brand{font-weight:700;letter-spacing:-.01em;color:var(--ink);text-decoration:none;white-space:nowrap}
+.top nav{display:flex;gap:2px;margin:0 auto;overflow-x:auto;scrollbar-width:none}
+.top nav a{padding:6px 12px;font-size:.92rem;white-space:nowrap}
+.top .tools{margin:0;display:flex;gap:6px}
+.top .btn{padding:6px 12px;font-size:.82rem}
+.hero{position:relative;overflow:hidden;margin:0;min-height:min(92vh,780px);display:flex;align-items:center}
+.hero-in{position:relative;width:100%;max-width:1060px;margin:0 auto;padding:64px clamp(18px,4vw,48px)}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.38;animation:drift 22s ease-in-out infinite}
+.b1{width:420px;height:420px;background:var(--tech);top:-120px;left:-80px}
+.b2{width:380px;height:380px;background:var(--admin);right:-60px;top:10%;animation-delay:-7s}
+.b3{width:340px;height:340px;background:var(--biz);left:40%;bottom:-140px;animation-delay:-13s}
+@keyframes drift{50%{transform:translate(40px,30px) scale(1.12)}}
+.eyebrow{margin:0 0 14px;max-width:none;font-weight:600;font-size:.95rem;color:var(--mute);letter-spacing:.02em}
+.hero h1{font-size:clamp(2.9rem,9vw,6rem);letter-spacing:-.035em;background:linear-gradient(90deg,var(--tech),var(--biz) 55%,var(--admin));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--tech);width:fit-content;max-width:100%}
+.claim{font-size:clamp(1.3rem,3.2vw,2rem);color:var(--ink);margin:10px 0 18px;font-weight:500;max-width:none}
+.hc{display:flex;flex-wrap:wrap;gap:10px 12px;align-items:center;color:var(--mute);font-size:.95rem}
+.hc a{color:var(--ink);text-decoration:none;font-weight:600;background:var(--glass);border:1px solid var(--line);border-radius:999px;padding:7px 16px}
+.hc a:hover{border-color:var(--tech);color:var(--tech)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+.tile{display:flex;flex-direction:column;gap:10px;background:var(--glass);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:26px;padding:22px;text-decoration:none;color:var(--ink);min-height:240px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.tile:hover,.tile:focus-visible{transform:translateY(-6px);box-shadow:0 20px 44px rgba(0,0,0,.22);border-color:var(--tech)}
+.tile h3{font-size:1.5rem}
+.tile p{margin:0;font-size:.95rem;max-width:none}
+.go{margin-top:auto;font-weight:700;color:var(--tech)}
+.tv{min-height:70px;display:flex;align-items:flex-end;gap:10px}
+.tvc i{display:block;border-radius:50%;width:var(--d);height:var(--d);background:var(--c);animation:bob 3.2s ease-in-out infinite;animation-delay:calc(var(--n)*.3s)}
+@keyframes bob{50%{transform:translateY(-9px)}}
+.tvi b{font-size:3rem;line-height:1;letter-spacing:-.04em;margin-right:8px}.tvi small{font-size:1.2rem;font-weight:600}
+.tvi u{display:block;width:12px;height:var(--h);background:var(--c);border-radius:4px 4px 2px 2px;transform-origin:bottom;animation:rise 2.6s ease-in-out infinite}
+@keyframes rise{50%{transform:scaleY(.7)}}
+.tve{flex-wrap:wrap;align-items:flex-start;gap:6px}
+.tve span{font-size:.82rem;font-weight:600;padding:4px 11px;border-radius:999px;background:var(--tech-s);color:var(--tech)}
+.tve .a{background:var(--admin-s);color:var(--admin)}.tve .p{background:var(--people-s);color:var(--people)}.tve .z{background:var(--biz-s);color:var(--biz)}
+.fu{animation:fu .8s cubic-bezier(.2,.7,.2,1) both}
+@keyframes fu{from{opacity:0;transform:translateY(22px)}}
+@media (prefers-reduced-motion:reduce){.blob,.tvc i,.tvi u,.fu{animation:none}}
+.page main{max-width:1060px;margin:0 auto;padding:40px clamp(18px,4vw,48px) 56px}
+.pf{display:grid;grid-template-columns:1.4fr 1fr;gap:36px;align-items:center;margin-bottom:22px}
+.pf .lead{max-width:none}
+.venn{position:relative;width:min(100%,320px);aspect-ratio:1;margin:0 auto}
+.venn i{position:absolute;width:62%;aspect-ratio:1;border-radius:50%;opacity:.8;mix-blend-mode:multiply}
+:root[data-cv="dark"] .venn i{mix-blend-mode:screen;opacity:.55}
+.v1{top:0;left:0;background:var(--people)}.v2{top:0;left:38%;background:var(--tech)}.v3{top:38%;left:0;background:var(--biz)}.v4{top:38%;left:38%;background:var(--admin)}
+.vl{position:absolute;transform:translate(-50%,-50%);font-weight:700;font-size:.82rem;color:var(--ink);pointer-events:none}
+.l1{left:24%;top:24%}.l2{left:76%;top:24%}.l3{left:24%;top:76%}.l4{left:76%;top:76%}
+.pf2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pf2 .panel{margin:0}
+.flow,.conv{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.flow i{font-style:normal;color:var(--mute)}
+.fs{background:var(--bg);border-radius:12px;padding:6px 12px;font-weight:600;font-size:.9rem}
+.fs em{font-style:normal;color:var(--tech);margin-right:4px}
+.conv span{font-weight:600;font-size:.9rem;padding:6px 14px;border-radius:999px;background:var(--biz-s);color:var(--biz)}
+.conv span:nth-child(2){background:var(--admin-s);color:var(--admin)}.conv span:nth-child(3){background:var(--tech-s);color:var(--tech)}
+.langc{border-left:4px solid var(--tech)}
+.langc h3{font-size:1.05rem;margin-bottom:10px}
+.hb{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:18px;align-items:start}
+.hts{display:grid;gap:12px}
+.ht{font:inherit;text-align:left;background:var(--panel);color:var(--ink);border:2px solid transparent;border-radius:20px;padding:16px 18px;cursor:pointer;display:grid;gap:8px;box-shadow:0 1px 2px rgba(0,0,0,.05);transition:transform .25s,border-color .25s}
+.ht:hover{transform:translateX(4px)}
+.ht[aria-pressed="true"]{border-color:var(--tech);box-shadow:0 8px 24px rgba(0,0,0,.14)}
+.ht .em{font-size:1.8rem;line-height:1}.ht b{font-size:1.2rem}
+.ht .chips li{font-size:.8rem;padding:3px 10px}
+.hp{margin:0}
+.hg{display:grid;gap:14px;animation:fu .5s both}
+.hw{display:grid;grid-template-columns:14px 1fr;gap:12px;background:var(--bg);border-radius:14px;padding:14px 16px}
+.hw>i{width:14px;height:14px;border-radius:50%;background:var(--c);margin-top:5px}
+.hw b{display:block;font-size:1.02rem}.hw span{color:var(--mute);font-size:.95rem}
+.hp .kl{margin-top:16px}
+.hp .note{margin:8px 0 0;font-size:.85rem}
+@media (max-width:860px){
+.top{flex-wrap:wrap;row-gap:6px}.top nav{order:3;width:100%;margin:0}
+.tiles,.pf2,.pf,.hb{grid-template-columns:1fr}
+.hero{min-height:0}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 120px)}
+}
+@media print{.top,.tiles,.blob{display:none}.hero{min-height:0}.hero-in{padding:0 0 12px}.hero h1{-webkit-text-fill-color:#000;color:#000;background:none}.hg[hidden]{display:grid}.fu{animation:none}}
+.hg[hidden],.hph[hidden]{display:none}
+.hph{border:2px dashed var(--line);border-radius:16px;padding:34px 20px;text-align:center;max-width:none;font-size:1.05rem;color:var(--mute);margin:0 0 6px}
+.hph::before{content:"\2190  "}
+.hw{animation:fu .55s both}.hw:nth-child(2){animation-delay:.12s}.hw:nth-child(3){animation-delay:.24s}
+@media (max-width:860px){.hph::before{content:"\2191  "}}
+@media print{.hph{display:none}.hg[hidden]{display:grid}}
 @media (max-width:860px){
 .row{grid-template-columns:1fr 90px}.row .bar{grid-column:1/-1;grid-row:2}
 .layout{grid-template-columns:1fr}
@@ -189,7 +274,7 @@ main{padding:36px 20px}
 details::before{left:-30px}
 }
 @media print{
-:root,:root[data-cv]{--bg:#fff;--panel:#fff;--ink:#000;--mute:#333;--line:#bbb;--tech:#0071e3;--people:#e5533d;--biz:#6f55e0;--tech-s:#e3f0fd;--people-s:#fde9e5;--biz-s:#ece8fc}
+:root,:root[data-cv]{--bg:#fff;--panel:#fff;--ink:#000;--mute:#333;--line:#bbb;--tech:#0071e3;--admin:#e5533d;--people:#1fa391;--biz:#6f55e0;--tech-s:#e3f0fd;--admin-s:#fde9e5;--people-s:#dcf3ef;--biz-s:#ece8fc}
 nav,.tools,.filters{display:none}
 .layout{display:block}
 aside{position:static;height:auto;background:#fff;padding:0 0 12px;border:0;border-bottom:2px solid #000;display:block}
@@ -202,40 +287,44 @@ section{margin-bottom:22px}
 </style>
 </head>
 <body>
-<div class="layout">
-<aside>
-<div>
-<h1>Carlo Coronato</h1>
-<p class="role">Business &amp; Organizational Development · HR Transformation · Project Management</p>
-</div>
-<ul class="contact">
-<li data-it="&lt;span&gt;Sede&lt;/span&gt;&lt;br&gt;Caserta, Italia · disponibile al trasferimento"><span>Based in</span><br>Caserta, Italy · open to relocation</li>
-<li><span>Email</span><br><a href="#" id="mail" rel="nofollow" data-it="Scrivimi una email">Send me an email</a></li>
-<li><span>LinkedIn</span><br><a href="https://www.linkedin.com/in/carlo-coronato-7138b5141" target="_blank" rel="noopener">Carlo Coronato</a></li>
-</ul>
+<header class="top">
+<a class="brand" href="#home">Carlo Coronato</a>
 <nav aria-label="Sections">
 <a href="#profile" data-it="Profilo">Profile</a>
 <a href="#experience" data-it="Evoluzione di carriera">Career evolution</a>
-<a href="#expertise" data-it="Competenze e strumenti">Expertise &amp; tools</a>
 <a href="#impact" data-it="Impatto dei progetti">Projects impact</a>
-<a href="#education" data-it="Formazione">Education</a>
-<a href="#beyond" data-it="Lingue e interessi">Languages &amp; interests</a>
+<a href="#expertise" data-it="Competenze e strumenti">Expertise &amp; tools</a>
+<a href="#education" data-it="Formazione e lingue">Education &amp; languages</a>
+<a href="#beyond" data-it="Oltre il lavoro">Beyond work</a>
 </nav>
 <div class="tools">
 <button class="btn" id="lang" type="button" aria-label="Passa all'italiano">Italiano</button>
-<button class="btn" id="expand" type="button">Expand all roles</button>
 <button class="btn" id="theme" type="button" data-it="Cambia tema">Switch theme</button>
-<button class="btn" id="print" type="button" data-it="Stampa / salva PDF">Print / save PDF</button>
+<button class="btn" id="print" type="button" data-it="Stampa / PDF">Print / PDF</button>
 </div>
-</aside>
-
-<main>
+</header>
+<section id="home" class="hero">
+<span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+<div class="hero-in">
+<p class="eyebrow fu">Business &amp; Organizational Development · HR Transformation · Project Management</p>
+<h1 class="fu" style="animation-delay:.1s">Carlo Coronato</h1>
+<p class="claim fu" style="animation-delay:.2s" data-it="Dove le persone incontrano la tecnologia">Where people meet technology</p>
+<div class="hc fu" style="animation-delay:.3s"><a href="#" id="mail" rel="nofollow" data-it="Scrivimi una email">Send me an email</a><a href="https://www.linkedin.com/in/carlo-coronato-7138b5141" target="_blank" rel="noopener">LinkedIn</a><span data-it="Caserta, Italia · disponibile al trasferimento">Caserta, Italy · open to relocation</span></div>
+<div class="tiles">
+<a class="tile fu" style="animation-delay:.4s" href="#experience"><div class="tv tvc"><i style="--d:12px;--c:var(--tech);--n:0"></i><i style="--d:22px;--c:var(--biz);--n:1"></i><i style="--d:34px;--c:var(--admin);--n:2"></i><i style="--d:48px;--c:var(--tech);--n:3"></i></div><h3 data-it="Evoluzione di carriera">Career Evolution</h3><p data-it="Dalle operations HR alla trasformazione digitale">From HR operations to digital transformation</p><span class="go" data-it="Esplora →">Explore →</span></a>
+<a class="tile fu" style="animation-delay:.5s" href="#impact"><div class="tv tvi"><b>19<small> h</small></b><u style="--h:10px;--c:var(--tech)"></u><u style="--h:40px;--c:var(--tech)"></u><u style="--h:25px;--c:var(--biz)"></u><u style="--h:10px;--c:var(--biz)"></u><u style="--h:10px;--c:var(--admin)"></u></div><h3 data-it="Impatto dei progetti">Projects Impact</h3><p data-it="19 ore risparmiate ogni settimana, progetto dopo progetto">19 hours saved every week, project by project</p><span class="go" data-it="Esplora →">Explore →</span></a>
+<a class="tile fu" style="animation-delay:.6s" href="#expertise"><div class="tv tve"><span class="t">HRIS</span><span class="t">Power BI</span><span class="a">HR Admin</span><span class="p">Change</span><span class="z">Org. Dev</span><span class="t">Automation</span><span class="p">Partnering</span></div><h3 data-it="Competenze e strumenti">Expertise &amp; Tools</h3><p data-it="Competenze e strumenti tra persone, tecnologia e business">Skills and tools across people, tech and business</p><span class="go" data-it="Esplora →">Explore →</span></a>
+</div>
+</div>
+</section>
+<div class="page"><main>
 <section id="profile">
-<h2 data-it="Profilo">Profile</h2>
-<p class="lead" data-it="Professionista HR e Organizational Development, attivo dove si incontrano persone, processi, tecnologia e business.">HR and Organizational Development professional working where people, processes, technology and business meet.</p>
-<p data-it="Background trasversale che spazia tra business partnering, trasformazione digitale, tecnologia, analytics e project management. Ho supportato le organizzazioni nell&#x27;ottimizzazione dei processi, nella digitalizzazione, nelle decisioni data-driven e nel cambiamento organizzativo.">Cross-functional background spanning business partnering, digital transformation, technology, analytics and project management. I have supported organizations through process optimization, digitalization, data-driven decision-making and organizational change.</p>
-<p data-it="Lavoro con un approccio orientato ai progetti: traduco le esigenze di business in processi e deliverable, monitoro i risparmi generati dalle soluzioni implementate e ne misuro impatto e valore aggiunto per il business.">I work with a project-oriented approach: translating business needs into processes and deliverables, tracking the savings generated by implemented solutions, and measuring their impact and added value for the business.</p>
-<p data-it="Particolarmente interessato a ruoli in cui convergono trasformazione del business, sviluppo organizzativo e miglioramento operativo.">Particularly interested in roles where business transformation, organizational development and operational improvement converge.</p>
+<h2>Profile</h2>
+<div class="pf"><div><p class="lead" data-it="Professionista HR e Organizational Development, attivo dove si incontrano persone, processi, tecnologia e business.">HR and Organizational Development professional working where people, processes, technology and business meet.</p><p data-it="Background trasversale che spazia tra business partnering, trasformazione digitale, tecnologia, analytics e project management. Ho supportato le organizzazioni nell&#x27;ottimizzazione dei processi, nella digitalizzazione, nelle decisioni data-driven e nel cambiamento organizzativo.">Cross-functional background spanning business partnering, digital transformation, technology, analytics and project management. I have supported organizations through process optimization, digitalization, data-driven decision-making and organizational change.</p></div><div class="venn" aria-hidden="true"><i class="v1"></i><i class="v2"></i><i class="v3"></i><i class="v4"></i><span class="vl l1" data-it="Persone">People</span><span class="vl l2" data-it="Tecnologia">Technology</span><span class="vl l3" data-it="Business">Business</span><span class="vl l4" data-it="Amministrazione">Administration</span></div></div>
+<div class="pf2">
+<div class="panel"><h3 data-it="Come lavoro">How I work</h3><div class="flow"><span class="fs" data-it="&lt;em&gt;1&lt;/em&gt; Esigenza di business"><em>1</em> Business need</span><i>→</i><span class="fs" data-it="&lt;em&gt;2&lt;/em&gt; Processo e deliverable"><em>2</em> Process &amp; deliverable</span><i>→</i><span class="fs" data-it="&lt;em&gt;3&lt;/em&gt; Risparmi monitorati"><em>3</em> Savings tracked</span><i>→</i><span class="fs" data-it="&lt;em&gt;4&lt;/em&gt; Impatto misurato"><em>4</em> Impact measured</span></div><p data-it="Lavoro con un approccio orientato ai progetti: traduco le esigenze di business in processi e deliverable, monitoro i risparmi generati dalle soluzioni implementate e ne misuro impatto e valore aggiunto per il business.">I work with a project-oriented approach: translating business needs into processes and deliverables, tracking the savings generated by implemented solutions, and measuring their impact and added value for the business.</p></div>
+<div class="panel"><h3 data-it="Cosa cerco">What I look for</h3><div class="conv"><span data-it="Trasformazione del business">Business transformation</span><span data-it="Sviluppo organizzativo">Organizational development</span><span data-it="Miglioramento operativo">Operational improvement</span></div><p data-it="Particolarmente interessato a ruoli in cui convergono trasformazione del business, sviluppo organizzativo e miglioramento operativo.">Particularly interested in roles where business transformation, organizational development and operational improvement converge.</p></div>
+</div>
 </section>
 
 <section id="experience">
@@ -247,8 +336,8 @@ section{margin-bottom:22px}
 <p class="hint" data-it="Scegli una fase, oppure premi Avvia per vedere crescere il mio profilo.">Pick a phase, or press Play to watch my profile grow.</p>
 <div class="pcs"><button class="pc" type="button" aria-pressed="false">Antares <small>2018</small></button><button class="pc" type="button" aria-pressed="false">Rummo <small>2020–21</small></button><button class="pc" type="button" aria-pressed="false">Rummo <small>2021–24</small></button><button class="pc" type="button" aria-pressed="true" data-it="Porsche Eng. &lt;small&gt;2024–oggi&lt;/small&gt;">Porsche Eng. <small>2024–now</small></button><button class="btn2 playb" id="play" type="button" data-it="▶ Avvia">▶ Play</button></div>
 <div class="cap" id="cap" aria-live="polite"></div>
-<div class="cloudw"><div class="cloud"><div class="bw p" style="left:14%;top:0cqw"><div class="bc"><span class="bo" data-l="1" style="--d:8cqw"></span></div><div class="bl" data-it="Operations HR">HR operations</div><div class="bs"></div></div><div class="bw p" style="left:15%;top:33cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="Business partnering">Business partnering</div><div class="bs"></div></div><div class="bw t" style="left:44%;top:0cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="HRIS">HRIS</div><div class="bs"></div></div><div class="bw t" style="left:62%;top:33cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="Processi e automazione">Process &amp; automation</div><div class="bs"></div></div><div class="bw t" style="left:38%;top:33cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="Analytics">Analytics</div><div class="bs"></div></div><div class="bw z" style="left:86%;top:14cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="Sviluppo organizzativo">Org. development</div><div class="bs"></div></div></div></div>
-<ul class="legend kl"><li class="p"><i></i><span data-it="Persone">People</span></li><li class="t"><i></i>Tech</li><li class="z"><i></i>Business</li></ul>
+<div class="cloudw"><div class="cloud"><div class="bw a" style="left:14%;top:0cqw"><div class="bc"><span class="bo" data-l="1" style="--d:8cqw"></span></div><div class="bl" data-it="Amministrazione">Administration</div><div class="bs"></div></div><div class="bw p" style="left:15%;top:33cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="Business partnering">Business partnering</div><div class="bs"></div></div><div class="bw t" style="left:44%;top:0cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="HRIS">HRIS</div><div class="bs"></div></div><div class="bw t" style="left:62%;top:33cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="Processi, AI e automazione">Processes, AI &amp; Automation</div><div class="bs"></div></div><div class="bw t" style="left:38%;top:33cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="Analytics">Analytics</div><div class="bs"></div></div><div class="bw z" style="left:86%;top:14cqw"><div class="bc"><span class="bo" data-l="3" style="--d:20cqw"></span></div><div class="bl" data-it="Sviluppo organizzativo">Org. development</div><div class="bs"></div></div></div></div>
+<ul class="legend kl"><li class="a"><i></i><span data-it="Amministrazione">Administration</span></li><li class="p"><i></i><span data-it="Persone">People</span></li><li class="t"><i></i>Tech</li><li class="z"><i></i>Business</li></ul>
 <div class="scale">
 <div class="sc"><span class="kb" style="--d:6px;opacity:.4"></span><p><b data-it="Non coinvolto">Not involved</b></p></div>
 <div class="sc"><span class="kb" style="--d:14px"></span><p><b data-it="Base">Foundation</b> <span data-it="Usavo questa competenza in un ruolo di supporto: svolgevo attività definite mentre imparavo l&#x27;area.">I used this skill in a supporting role: carrying out defined tasks while learning the area.</span></p></div>
@@ -259,7 +348,7 @@ section{margin-bottom:22px}
 <div id="vmat" class="panel" hidden>
 <h3 data-it="Le competenze acquisite nel tempo">Skills acquired along the way</h3>
 <p class="hint" data-it="Competenze raggruppate per dominio, fase per fase. La bolla su ogni riga di dominio è il livello del dominio mostrato nella vista Domini.">Skills grouped by domain, phase by phase. The bubble on each domain row is the domain level shown in the Domain view.</p>
-<div class="bbl"><div class="mx"><div></div><div class="mh" data-it="Porsche Eng.&lt;small&gt;2024–oggi&lt;/small&gt;">Porsche Eng.<small>2024–now</small></div><div class="mh">Rummo<small>2021–24</small></div><div class="mh">Rummo<small>2020–21</small></div><div class="mh">Antares<small>2018</small></div><div class="mgl p" data-it="Operations HR">HR operations</div><div class="mgb p"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb p"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb p"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb p"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="ml" data-it="Amministrazione HR e documentale">HR administration &amp; documents</div><div class="mc p" data-l="1" title="Foundation"></div><div class="mc p" data-l="1" title="Foundation"></div><div class="mc p" data-l="3" title="Core to the role"></div><div class="mc p" data-l="3" data-f="1" title="Core to the role"></div><div class="ml" data-it="Presenze e payroll">Time &amp; attendance, payroll</div><div class="mc p" data-l="0" title="Not involved"></div><div class="mc p" data-l="1" title="Foundation"></div><div class="mc p" data-l="3" title="Core to the role"></div><div class="mc p" data-l="2" data-f="1" title="Working"></div><div class="ml" data-it="Selezione e employee relations">Recruitment &amp; employee relations</div><div class="mc p" data-l="0" title="Not involved"></div><div class="mc p" data-l="1" title="Foundation"></div><div class="mc p" data-l="3" data-f="1" title="Core to the role"></div><div class="mc p" data-l="0" title="Not involved"></div><div class="mgl p" data-it="Business partnering">Business partnering</div><div class="mgb p"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb p"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb p"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb p"><span class="mb" style="--d:4px" title="Not involved"></span></div><div class="ml" data-it="Supporto a stakeholder e management">Stakeholder &amp; management support</div><div class="mc p" data-l="3" title="Core to the role"></div><div class="mc p" data-l="2" title="Working"></div><div class="mc p" data-l="1" data-f="1" title="Foundation"></div><div class="mc p" data-l="0" title="Not involved"></div><div class="ml" data-it="Retribuzioni, performance e talent">Compensation, performance &amp; talent</div><div class="mc p" data-l="0" title="Not involved"></div><div class="mc p" data-l="2" title="Working"></div><div class="mc p" data-l="1" data-f="1" title="Foundation"></div><div class="mc p" data-l="0" title="Not involved"></div><div class="ml" data-it="Workforce e skills planning">Workforce &amp; skills planning</div><div class="mc p" data-l="2" title="Working"></div><div class="mc p" data-l="1" data-f="1" title="Foundation"></div><div class="mc p" data-l="0" title="Not involved"></div><div class="mc p" data-l="0" title="Not involved"></div><div class="mgl t" data-it="HRIS">HRIS</div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb t"><span class="mb" style="--d:4px" title="Not involved"></span></div><div class="ml" data-it="Gestione e ottimizzazione HRIS">HRIS management &amp; optimization</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="2" data-f="1" title="Working"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="ml" data-it="Integrazione dei sistemi e adozione">System integration &amp; user adoption</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="2" data-f="1" title="Working"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mgl t" data-it="Processi e automazione">Process &amp; automation</div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb t"><span class="mb" style="--d:4px" title="Not involved"></span></div><div class="ml" data-it="Mappatura di processi e workflow">Process &amp; workflow mapping</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="3" data-f="1" title="Core to the role"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="ml" data-it="Automazione dei workflow e flussi approvativi">Workflow automation &amp; approval flows</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="2" data-f="1" title="Working"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="ml" data-it="Strumenti digitali e mobile interni">Internal digital &amp; mobile tools</div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="3" data-f="1" title="Core to the role"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="ml" data-it="Pianificazione dei turni">Workforce scheduling</div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="1" title="Foundation"></div><div class="mc t" data-l="1" data-f="1" title="Foundation"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mgl t" data-it="Analytics">Analytics</div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb t"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb t"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="ml" data-it="Reporting HR">HR reporting</div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="1" data-f="1" title="Foundation"></div><div class="ml" data-it="Analytics sulla forza lavoro e dashboard">Workforce analytics &amp; dashboards</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="1" data-f="1" title="Foundation"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mgl z" data-it="Sviluppo organizzativo">Org. development</div><div class="mgb z"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb z"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb z"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb z"><span class="mb" style="--d:4px" title="Not involved"></span></div><div class="ml" data-it="Disegno organizzativo (organigrammi, job description)">Org design (charts, job descriptions)</div><div class="mc z" data-l="2" title="Working"></div><div class="mc z" data-l="1" title="Foundation"></div><div class="mc z" data-l="1" data-f="1" title="Foundation"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="ml" data-it="Change management e adozione">Change management &amp; adoption</div><div class="mc z" data-l="3" title="Core to the role"></div><div class="mc z" data-l="2" data-f="1" title="Working"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="ml" data-it="Governance e modelli operativi">Governance &amp; operating models</div><div class="mc z" data-l="2" data-f="1" title="Working"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="mc z" data-l="0" title="Not involved"></div></div></div>
+<div class="bbl"><div class="mx"><div></div><div class="mh" data-it="Porsche Eng.&lt;small&gt;2024–oggi&lt;/small&gt;">Porsche Eng.<small>2024–now</small></div><div class="mh">Rummo<small>2021–24</small></div><div class="mh">Rummo<small>2020–21</small></div><div class="mh">Antares<small>2018</small></div><div class="mgl a" data-it="Amministrazione">Administration</div><div class="mgb a"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb a"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb a"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb a"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="ml" data-it="Amministrazione HR e documentale">HR administration &amp; documents</div><div class="mc a" data-l="1" title="Foundation"></div><div class="mc a" data-l="1" title="Foundation"></div><div class="mc a" data-l="3" title="Core to the role"></div><div class="mc a" data-l="3" data-f="1" title="Core to the role"></div><div class="ml" data-it="Presenze e payroll">Time &amp; attendance, payroll</div><div class="mc a" data-l="0" title="Not involved"></div><div class="mc a" data-l="1" title="Foundation"></div><div class="mc a" data-l="3" title="Core to the role"></div><div class="mc a" data-l="2" data-f="1" title="Working"></div><div class="ml" data-it="Selezione e employee relations">Recruitment &amp; employee relations</div><div class="mc a" data-l="0" title="Not involved"></div><div class="mc a" data-l="1" title="Foundation"></div><div class="mc a" data-l="3" data-f="1" title="Core to the role"></div><div class="mc a" data-l="0" title="Not involved"></div><div class="mgl p" data-it="Business partnering">Business partnering</div><div class="mgb p"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb p"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb p"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb p"><span class="mb" style="--d:4px" title="Not involved"></span></div><div class="ml" data-it="Supporto a stakeholder e management">Stakeholder &amp; management support</div><div class="mc p" data-l="3" title="Core to the role"></div><div class="mc p" data-l="2" title="Working"></div><div class="mc p" data-l="1" data-f="1" title="Foundation"></div><div class="mc p" data-l="0" title="Not involved"></div><div class="ml" data-it="Retribuzioni, performance e talent">Compensation, performance &amp; talent</div><div class="mc p" data-l="0" title="Not involved"></div><div class="mc p" data-l="2" title="Working"></div><div class="mc p" data-l="1" data-f="1" title="Foundation"></div><div class="mc p" data-l="0" title="Not involved"></div><div class="ml" data-it="Workforce e skills planning">Workforce &amp; skills planning</div><div class="mc p" data-l="2" title="Working"></div><div class="mc p" data-l="1" data-f="1" title="Foundation"></div><div class="mc p" data-l="0" title="Not involved"></div><div class="mc p" data-l="0" title="Not involved"></div><div class="mgl t" data-it="HRIS">HRIS</div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb t"><span class="mb" style="--d:4px" title="Not involved"></span></div><div class="ml" data-it="Gestione e ottimizzazione HRIS">HRIS management &amp; optimization</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="2" data-f="1" title="Working"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="ml" data-it="Integrazione dei sistemi e adozione">System integration &amp; user adoption</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="2" data-f="1" title="Working"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mgl t" data-it="Processi, AI e automazione">Processes, AI &amp; Automation</div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb t"><span class="mb" style="--d:4px" title="Not involved"></span></div><div class="ml" data-it="Mappatura di processi e workflow">Process &amp; workflow mapping</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="3" data-f="1" title="Core to the role"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="ml" data-it="Automazione dei workflow e flussi approvativi">Workflow automation &amp; approval flows</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="2" data-f="1" title="Working"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="ml" data-it="Strumenti digitali e mobile interni">Internal digital &amp; mobile tools</div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="3" data-f="1" title="Core to the role"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="ml" data-it="Pianificazione dei turni">Workforce scheduling</div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="1" title="Foundation"></div><div class="mc t" data-l="1" data-f="1" title="Foundation"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="ml" data-it="Automazioni AI (MCP)">AI automations (MCP)</div><div class="mc t" data-l="2" data-f="1" title="Working"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="ml" data-it="Soluzioni Copilot Studio">Copilot Studio solutions</div><div class="mc t" data-l="2" data-f="1" title="Working"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mgl t" data-it="Analytics">Analytics</div><div class="mgb t"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb t"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb t"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb t"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="ml" data-it="Reporting HR">HR reporting</div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="1" data-f="1" title="Foundation"></div><div class="ml" data-it="Analytics sulla forza lavoro e dashboard">Workforce analytics &amp; dashboards</div><div class="mc t" data-l="3" title="Core to the role"></div><div class="mc t" data-l="2" title="Working"></div><div class="mc t" data-l="1" data-f="1" title="Foundation"></div><div class="mc t" data-l="0" title="Not involved"></div><div class="mgl z" data-it="Sviluppo organizzativo">Org. development</div><div class="mgb z"><span class="mb" style="--d:22px" title="Core to the role"></span></div><div class="mgb z"><span class="mb" style="--d:16px" title="Working"></span></div><div class="mgb z"><span class="mb" style="--d:10px" title="Foundation"></span></div><div class="mgb z"><span class="mb" style="--d:4px" title="Not involved"></span></div><div class="ml" data-it="Disegno organizzativo (organigrammi, job description)">Org design (charts, job descriptions)</div><div class="mc z" data-l="2" title="Working"></div><div class="mc z" data-l="1" title="Foundation"></div><div class="mc z" data-l="1" data-f="1" title="Foundation"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="ml" data-it="Change management e adozione">Change management &amp; adoption</div><div class="mc z" data-l="3" title="Core to the role"></div><div class="mc z" data-l="2" data-f="1" title="Working"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="ml" data-it="Governance e modelli operativi">Governance &amp; operating models</div><div class="mc z" data-l="2" data-f="1" title="Working"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="mc z" data-l="0" title="Not involved"></div><div class="mc z" data-l="0" title="Not involved"></div></div></div>
 <ul class="mlg">
 <li><span class="mc t" data-l="1"></span><span data-it="Base">Foundation</span></li>
 <li><span class="mc t" data-l="2"></span><span data-it="Operativo">Working</span></li>
@@ -275,6 +364,7 @@ section{margin-bottom:22px}
 </div>
 <button class="btn2" id="fullbtn" type="button" aria-expanded="false">Show full role descriptions</button>
 <div id="full" hidden>
+<button class="btn2" id="expand" type="button" data-it="Espandi tutti i ruoli">Expand all roles</button>
 <div class="tl">
 
 <details open>
@@ -339,25 +429,6 @@ section{margin-bottom:22px}
 </div>
 </section>
 
-<section id="expertise">
-<h2 data-it="Competenze e strumenti">Expertise &amp; tools</h2>
-<div class="cols">
-<div>
-<h3 data-it="Competenze chiave">Core expertise</h3>
-<div class="filters" role="group" aria-label="Filter expertise"><button type="button" data-f="all" aria-pressed="true" data-it="Tutte">All</button><button type="button" data-f="people" aria-pressed="false" data-it="Persone">People</button><button type="button" data-f="tech" aria-pressed="false" data-it="Tech">Tech</button><button type="button" data-f="biz" aria-pressed="false">Business</button></div>
-<ul class="chips" id="core">
-<li>Business &amp; Organizational Development</li><li>Business Transformation</li><li>Business Partner</li><li>Process Improvement</li><li>Project Management</li><li>HR Transformation</li><li>HRIS &amp; HR Technology</li><li>Analytics</li><li>Digitalization &amp; Automation</li><li>AI MCP Automations</li><li>Change Management</li><li>Governance &amp; Operating Processes</li><li>Stakeholder Management</li><li>Reporting</li><li>Skills &amp; Workforce Planning</li><li>Training Design</li>
-</ul>
-</div>
-<div>
-<h3 data-it="Strumenti digitali e professionali">Digital &amp; professional tools</h3>
-<ul class="chips">
-<li>SAP SuccessFactors</li><li>Zucchetti Infinity</li><li>Power BI</li><li>Microsoft 365</li><li>Power Automate</li><li>Power Apps</li><li>Microsoft Planner</li><li>Excel</li><li>PowerPoint</li><li>Visio</li><li>Jira</li><li>Confluence</li><li>SAP Signavio</li><li>Learn365</li><li>Draw.io</li><li>MS Access / Visual Basic</li><li>Copilot Studio</li><li>Arxivar</li><li>G-Suite Enterprise</li><li>Infobusiness</li><li>Board BI</li><li>Stages</li>
-</ul>
-</div>
-</div>
-</section>
-
 <section id="impact">
 <h2 data-it="Impatto dei miei progetti">My Projects Impact</h2>
 <p data-it="Tempo risparmiato sostituendo il lavoro manuale con soluzioni automatizzate e integrate in cinque progetti digitali HR.">Time saved by replacing manual work with automated, integrated solutions across five HR digital projects.</p>
@@ -390,35 +461,46 @@ section{margin-bottom:22px}
 </div>
 </section>
 
+<section id="expertise">
+<h2 data-it="Competenze e strumenti">Expertise &amp; tools</h2>
+<div class="cols">
+<div>
+<h3 data-it="Competenze chiave">Core expertise</h3>
+<div class="filters" role="group" aria-label="Filter expertise"><button type="button" data-f="all" aria-pressed="true" data-it="Tutte">All</button><button type="button" data-f="people" aria-pressed="false" data-it="Persone">People</button><button type="button" data-f="tech" aria-pressed="false" data-it="Tech">Tech</button><button type="button" data-f="biz" aria-pressed="false">Business</button></div>
+<ul class="chips" id="core">
+<li>Business &amp; Organizational Development</li><li>Business Transformation</li><li>Business Partner</li><li>Process Improvement</li><li>Project Management</li><li>HR Transformation</li><li>HRIS &amp; HR Technology</li><li>Analytics</li><li>Digitalization &amp; Automation</li><li>AI MCP Automations</li><li>Change Management</li><li>Governance &amp; Operating Processes</li><li>Stakeholder Management</li><li>Reporting</li><li>Skills &amp; Workforce Planning</li><li>Training Design</li>
+</ul>
+</div>
+<div>
+<h3 data-it="Strumenti digitali e professionali">Digital &amp; professional tools</h3>
+<ul class="chips">
+<li>SAP SuccessFactors</li><li>Zucchetti Infinity</li><li>Power BI</li><li>Microsoft 365</li><li>Power Automate</li><li>Power Apps</li><li>Microsoft Planner</li><li>Excel</li><li>PowerPoint</li><li>Visio</li><li>Jira</li><li>Confluence</li><li>SAP Signavio</li><li>Learn365</li><li>Draw.io</li><li>MS Access / Visual Basic</li><li>Copilot Studio</li><li>Arxivar</li><li>G-Suite Enterprise</li><li>Infobusiness</li><li>Board BI</li><li>Stages</li>
+</ul>
+</div>
+</div>
+</section>
+
 <section id="education">
-<h2 data-it="Formazione">Education</h2>
+<h2 data-it="Formazione e lingue">Education &amp; Languages</h2>
 <div class="edu">
 <div><b>Bachelor Degree in Law</b><span data-it="Università degli Studi di Cassino e del Lazio Meridionale · Set 2015 – Lug 2019 · Focus: Diritto del lavoro e Diritto amministrativo">Università degli Studi di Cassino e del Lazio Meridionale · Sep 2015 – Jul 2019 · Focus: Labor Law and Administrative Law</span></div>
 <div><b data-it="Music Business and Modern Guitar &lt;em class=&quot;pill&quot;&gt;Vincitore di borsa di studio&lt;/em&gt;">Music Business and Modern Guitar <em class="pill">Scholarship winner</em></b><span data-it="ICMP Institute of Contemporary Music Performance, Londra · Gen 2013 – Giu 2013">ICMP Institute of Contemporary Music Performance, London · Jan 2013 – Jun 2013</span></div>
 <div><b data-it="Diploma di Geometra">High school Geometer Diploma</b><span data-it="ISISS Michelangelo Buonarroti, Caserta · Set 2006 – Lug 2011 · Progetto 5 (programma sperimentale)">ISISS Michelangelo Buonarroti, Caserta · Sep 2006 – Jul 2011 · Project 5 (Experimental Program)</span></div>
 <div><b data-it="Stage in Software Engineering &lt;em class=&quot;pill&quot;&gt;Vincitore di borsa di studio&lt;/em&gt;">Software Engineering Internship <em class="pill">Scholarship winner</em></b><span data-it="Politecnico di Milano · 2010">Politecnico di Milano · 2010</span></div>
+<div class="langc"><h3 data-it="Lingue">Languages</h3><ul class="chips"><li data-it="Italiano – Madrelingua">Italian – Native</li><li data-it="Inglese – Padronanza professionale completa (C1)">English – Full professional proficiency (C1)</li></ul></div>
 </div>
 </section>
 
 <section id="beyond">
-<h2 data-it="Lingue e interessi">Languages &amp; interests</h2>
-<div class="cols">
-<div>
-<h3 data-it="Lingue">Languages</h3>
-<ul class="chips"><li data-it="Italiano – Madrelingua">Italian – Native</li><li data-it="Inglese – Padronanza professionale completa (C1)">English – Full professional proficiency (C1)</li></ul>
-</div>
-<div>
-<h3 data-it="Sport">Sports</h3>
-<ul class="chips"><li>Tennis</li><li data-it="Pallanuoto">Water polo</li><li data-it="Corsa">Running</li><li data-it="Palestra">Gym</li><li>Golf</li><li>Trekking</li></ul>
-</div>
-</div>
-<p style="margin-top:18px" data-it="La musica è una costante: chitarra (insegno chitarra moderna dal 2015), pianoforte, batteria e composizione. Mi piace incontrare persone di culture diverse, come ho fatto negli anni a Londra e ogni volta che viaggio in posti nuovi.">Music is a constant: guitar (I have taught modern guitar since 2015), piano, drums and composition. I enjoy meeting people from diverse cultural backgrounds, as I did during my years in London and whenever I travel to new places.</p>
+<h2 data-it="Oltre il lavoro">Beyond work</h2>
+<p data-it="Quello che faccio fuori dal lavoro cambia il modo in cui lavoro. Scegli una passione per vedere come si riflette nel mio quotidiano.">What I do outside work shapes how I work. Pick a passion to see how it shows up in my day-to-day.</p>
+<div class="hb"><div class="hts"><button class="ht" type="button" aria-pressed="false"><span class="em" aria-hidden="true">🎸</span><b data-it="Musica">Music</b><ul class="chips plain"><li data-it="Insegno chitarra moderna dal 2015">Modern guitar teacher since 2015</li><li data-it="Pianoforte">Piano</li><li data-it="Batteria">Drums</li><li data-it="Composizione">Composition</li></ul></button><button class="ht" type="button" aria-pressed="false"><span class="em" aria-hidden="true">🎾</span><b data-it="Sport">Sport</b><ul class="chips plain"><li data-it="Tennis">Tennis</li><li data-it="Pallanuoto">Water polo</li><li data-it="Corsa">Running</li><li data-it="Palestra">Gym</li><li data-it="Golf">Golf</li><li data-it="Trekking">Trekking</li></ul></button><button class="ht" type="button" aria-pressed="false"><span class="em" aria-hidden="true">🌍</span><b data-it="Viaggi e culture">Travel &amp; cultures</b><ul class="chips plain"><li data-it="Studio a Londra">Studying in London</li><li data-it="Nuove destinazioni">New destinations</li><li data-it="Culture diverse">Diverse cultures</li></ul></button></div><div class="panel hp"><h3 data-it="Come si riflette nel lavoro">How it shows up at work</h3><p class="hph" id="hph" data-it="Scegli una passione per vedere come si riflette nel mio quotidiano.">Pick a passion to see how it shows up in my day-to-day.</p><div class="hg" hidden><div class="hw p"><i></i><div><b data-it="Formazione e condivisione delle conoscenze">Training &amp; knowledge sharing</b><span data-it="Insegnare chitarra dal 2015 mi ha insegnato a spezzare le cose complesse in passi chiari: lo stesso approccio che uso nel training design e nell&#x27;adozione da parte degli utenti.">Teaching guitar since 2015 taught me to break complex things into clear steps: the same approach I use in training design and user adoption.</span></div></div><div class="hw p"><i></i><div><b data-it="Ascoltare prima di agire">Listening before acting</b><span data-it="Suonare con altri parte dall&#x27;ascolto. Mi aiuta a leggere gli stakeholder e a scegliere il momento giusto per muovermi.">Playing with others starts with listening. It helps me read stakeholders and choose the right moment to move.</span></div></div><div class="hw t"><i></i><div><b data-it="Struttura e creatività">Structure with creativity</b><span data-it="Comporre significa costruire qualcosa di coerente dal nulla: l&#x27;istinto che c&#x27;è dietro il modo in cui progetto processi e workflow.">Composing means building something coherent from nothing: the instinct behind how I design processes and workflows.</span></div></div></div><div class="hg" hidden><div class="hw p"><i></i><div><b data-it="Lavoro di squadra">Teamwork</b><span data-it="La pallanuoto si vince con ruoli, comunicazione e fiducia, esattamente come i progetti cross-funzionali.">Water polo is won by roles, communication and trust, exactly like cross-functional projects.</span></div></div><div class="hw z"><i></i><div><b data-it="Costanza e resilienza">Consistency &amp; resilience</b><span data-it="Corsa, palestra e trekking premiano lo sforzo costante sulle lunghe distanze, come i programmi di trasformazione che durano mesi.">Running, gym and trekking reward steady effort over long distances, like multi-month transformation programs.</span></div></div><div class="hw t"><i></i><div><b data-it="Concentrazione e precisione">Focus &amp; precision</b><span data-it="Tennis e golf allenano l&#x27;attenzione ai dettagli sotto pressione, utile per accuratezza dei dati e reporting.">Tennis and golf train attention to detail under pressure, useful for data accuracy and reporting.</span></div></div></div><div class="hg" hidden><div class="hw p"><i></i><div><b data-it="Comunicazione interculturale">Cross-cultural communication</b><span data-it="Studiare a Londra e conoscere persone di tante culture ha reso naturale lavorare tra culture diverse, come nel mio HR business partnering per gli Stati Uniti dall&#x27;Italia.">Studying in London and meeting people from many backgrounds made working across cultures natural, as in my U.S. HR business partnering from Italy.</span></div></div><div class="hw z"><i></i><div><b data-it="Adattabilità">Adaptability</b><span data-it="Posti nuovi significano regole nuove. Adattarsi in fretta è un vantaggio concreto nel cambiamento organizzativo.">New places mean new rules. Adapting quickly is a real advantage in organizational change.</span></div></div><div class="hw p"><i></i><div><b data-it="Inglese al lavoro">English at work</b><span data-it="Inglese professionale completo (C1) per team e stakeholder internazionali.">Full professional English (C1) for international teams and stakeholders.</span></div></div></div>
+<ul class="legend kl"><li class="p"><i></i><span data-it="Persone">People</span></li><li class="t"><i></i>Tech</li><li class="z"><i></i>Business</li></ul>
+<p class="note" data-it="I colori corrispondono ai domini di competenza usati in questa pagina.">Colors match the work domains used across this page.</p></div></div>
 </section>
 
 <footer>Carlo Coronato · Business &amp; Organizational Development / HR Transformation</footer>
-</main>
-</div>
-
+</main></div>
 <script>
 (function(){
 var root=document.documentElement;
@@ -467,6 +549,10 @@ document.getElementById('play').addEventListener('click',function(){stopP();var 
 function setView(v){segb.forEach(function(t){t.setAttribute('aria-selected',t.dataset.v===v)});vdom.hidden=v!=='dom';vmat.hidden=v!=='mat';stopP();if(v==='dom')setPh(curPh);else cardEls.forEach(function(c){c.classList.remove('hl')})}
 segb.forEach(function(t){t.addEventListener('click',function(){setView(t.dataset.v)})});
 setPh(3);
+var hts=[].slice.call(document.querySelectorAll('.ht')),hgs=[].slice.call(document.querySelectorAll('.hg'));
+var hph=document.getElementById('hph');
+function selH(i){hts.forEach(function(t,k){t.setAttribute('aria-pressed',k===i)});hgs.forEach(function(g,k){g.hidden=k!==i});hph.hidden=true}
+hts.forEach(function(t,k){t.addEventListener('click',function(){selH(k)})});
 var links=[].slice.call(document.querySelectorAll('nav a'));
 var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
 if('IntersectionObserver' in window){
